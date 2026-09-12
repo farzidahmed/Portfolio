@@ -1,2 +1,2 @@
 # Portfolio
-http://farzid.portfolio/
+https://farzidahmed.github.io/Portfolio/
