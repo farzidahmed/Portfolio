@@ -5,26 +5,26 @@
 
 /* ---------------- CSS Variables & Themes ---------------- */
 :root {
-  /* Colors - Dark Theme (Default Flutter Sky & Cyber Mesh) */
-  --bg-primary: #070c18;
-  --bg-secondary: #0d1527;
-  --bg-tertiary: #14203a;
-  --bg-card: rgba(15, 23, 42, 0.75);
-  --bg-card-hover: rgba(23, 37, 68, 0.9);
+  /* Clean, Minimalist Obsidian Slate Theme (Silicon Valley / Linear Style) */
+  --bg-primary: #0B0F17;
+  --bg-secondary: #111827;
+  --bg-tertiary: #1E293B;
+  --bg-card: rgba(17, 24, 39, 0.72);
+  --bg-card-hover: rgba(23, 33, 54, 0.9);
   --glass-border: rgba(255, 255, 255, 0.08);
-  --glass-border-hover: rgba(84, 197, 248, 0.4);
+  --glass-border-hover: rgba(56, 189, 248, 0.35);
 
-  /* Flutter & Tech Accent Colors */
-  --flutter-blue: #02569B;
-  --flutter-sky: #0175C2;
-  --flutter-cyan: #54C5F8;
-  --flutter-light: #80D8FF;
+  /* Refined Tech Accent Colors */
+  --flutter-blue: #1D4ED8;
+  --flutter-sky: #2563EB;
+  --flutter-cyan: #38BDF8;
+  --flutter-light: #BAE6FD;
   
   --accent-emerald: #10B981;
   --accent-violet: #8B5CF6;
   --accent-amber: #F59E0B;
   --accent-rose: #F43F5E;
-  --accent-glow: rgba(1, 117, 194, 0.35);
+  --accent-glow: rgba(56, 189, 248, 0.2);
 
   /* Typography Colors */
   --text-main: #F8FAFC;
@@ -32,9 +32,9 @@
   --text-dim: #64748B;
 
   /* Gradients */
-  --primary-gradient: linear-gradient(135deg, #0175C2 0%, #54C5F8 50%, #80D8FF 100%);
-  --glow-gradient: radial-gradient(circle, rgba(1, 117, 194, 0.3) 0%, rgba(84, 197, 248, 0.08) 50%, transparent 70%);
-  --card-gradient: linear-gradient(135deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.01) 100%);
+  --primary-gradient: linear-gradient(135deg, #2563EB 0%, #38BDF8 100%);
+  --glow-gradient: radial-gradient(circle, rgba(56, 189, 248, 0.18) 0%, rgba(37, 99, 235, 0.04) 50%, transparent 70%);
+  --card-gradient: linear-gradient(135deg, rgba(255, 255, 255, 0.04) 0%, rgba(255, 255, 255, 0.01) 100%);
 
   /* Fonts */
   --font-heading: 'Outfit', -apple-system, BlinkMacSystemFont, sans-serif;
@@ -42,10 +42,10 @@
   --font-mono: 'JetBrains Mono', monospace;
 
   /* Shadows & Glass */
-  --shadow-sm: 0 4px 6px -1px rgba(0, 0, 0, 0.3);
-  --shadow-md: 0 10px 20px -3px rgba(0, 0, 0, 0.4);
-  --shadow-lg: 0 20px 30px -5px rgba(0, 0, 0, 0.5);
-  --shadow-glow: 0 0 35px var(--accent-glow);
+  --shadow-sm: 0 4px 6px -1px rgba(0, 0, 0, 0.25);
+  --shadow-md: 0 10px 20px -3px rgba(0, 0, 0, 0.35);
+  --shadow-lg: 0 20px 30px -5px rgba(0, 0, 0, 0.45);
+  --shadow-glow: 0 0 30px var(--accent-glow);
   --backdrop-blur: blur(18px);
 
   /* Transitions */
@@ -229,46 +229,46 @@ body {
 .ambient-glow {
   position: absolute;
   border-radius: 50%;
-  filter: blur(130px);
+  filter: blur(140px);
   pointer-events: none;
-  opacity: 0.55;
+  opacity: 0.25;
   transition: all 0.8s ease;
 }
 
 .glow-1 {
-  width: 600px;
-  height: 600px;
-  background: radial-gradient(circle, var(--flutter-sky) 0%, transparent 70%);
-  top: -120px;
-  right: -100px;
+  width: 550px;
+  height: 550px;
+  background: radial-gradient(circle, #2563EB 0%, transparent 70%);
+  top: -100px;
+  right: -80px;
   animation: drift-1 18s ease-in-out infinite alternate;
 }
 
 .glow-2 {
-  width: 550px;
-  height: 550px;
-  background: radial-gradient(circle, var(--accent-violet) 0%, transparent 70%);
-  top: 35%;
-  left: -150px;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, #6366F1 0%, transparent 70%);
+  top: 40%;
+  left: -120px;
   animation: drift-2 22s ease-in-out infinite alternate;
 }
 
 .glow-3 {
-  width: 650px;
-  height: 650px;
-  background: radial-gradient(circle, var(--flutter-blue) 0%, transparent 70%);
-  bottom: -100px;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, #0284C7 0%, transparent 70%);
+  bottom: -80px;
   right: 5%;
   animation: drift-1 20s ease-in-out infinite alternate;
 }
 
 .glow-4 {
-  width: 450px;
-  height: 450px;
-  background: radial-gradient(circle, var(--accent-emerald) 0%, transparent 70%);
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, #10B981 0%, transparent 70%);
   bottom: 20%;
   left: 30%;
-  opacity: 0.25;
+  opacity: 0.15;
   animation: drift-2 15s ease-in-out infinite alternate;
 }
 
@@ -280,6 +280,72 @@ body {
 @keyframes drift-2 {
   0% { transform: translate(0, 0) scale(1.1); }
   100% { transform: translate(80px, -50px) scale(0.9); }
+}
+
+/* ---------------- Scroll Reveal & Smooth Entry Animations ---------------- */
+.reveal-item {
+  opacity: 0;
+  transform: translateY(32px);
+  transition: opacity 0.75s cubic-bezier(0.16, 1, 0.3, 1), transform 0.75s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+
+.reveal-item.reveal-left {
+  transform: translateX(-35px);
+}
+
+.reveal-item.reveal-right {
+  transform: translateX(35px);
+}
+
+.reveal-item.reveal-zoom {
+  transform: scale(0.92);
+}
+
+.reveal-item.is-revealed {
+  opacity: 1;
+  transform: translate(0) scale(1);
+}
+
+/* Staggered cascading delays */
+.stagger-1 { transition-delay: 0.08s; }
+.stagger-2 { transition-delay: 0.16s; }
+.stagger-3 { transition-delay: 0.24s; }
+.stagger-4 { transition-delay: 0.32s; }
+.stagger-5 { transition-delay: 0.40s; }
+
+/* Hero elements cascading entry animation */
+.hero-content > * {
+  animation: hero-fade-up 0.8s cubic-bezier(0.16, 1, 0.3, 1) backwards;
+}
+.hero-content .status-pill { animation-delay: 0.08s; }
+.hero-content .hero-title { animation-delay: 0.16s; }
+.hero-content .hero-roles-banner { animation-delay: 0.24s; }
+.hero-content .hero-typing-wrap { animation-delay: 0.32s; }
+.hero-content .hero-desc { animation-delay: 0.40s; }
+.hero-content .hero-contact-chips { animation-delay: 0.48s; }
+.hero-content .hero-cta-group { animation-delay: 0.56s; }
+.hero-visual { animation: hero-fade-up 1s cubic-bezier(0.16, 1, 0.3, 1) 0.25s backwards; }
+
+@keyframes hero-fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(28px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Section Header Focus Animation */
+.section-header.is-revealed .section-badge {
+  animation: badge-pop 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+@keyframes badge-pop {
+  0% { transform: scale(0.85); opacity: 0; }
+  100% { transform: scale(1); opacity: 1; }
 }
 
 /* ---------------- Theme Palette Dropdown ---------------- */
@@ -694,6 +760,37 @@ html.light .moon-icon { display: none; }
   letter-spacing: -0.02em;
 }
 
+.hero-roles-banner {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin-bottom: 1.2rem;
+}
+
+.role-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--flutter-cyan);
+  background: rgba(84, 197, 248, 0.08);
+  padding: 0.25rem 0.65rem;
+  border-radius: 6px;
+  border: 1px solid rgba(84, 197, 248, 0.2);
+}
+
+.role-sep {
+  color: var(--text-dim);
+  font-size: 0.9rem;
+}
+
+.nav-resume-btn {
+  display: inline-flex;
+  gap: 0.4rem;
+}
+
 .hero-typing-wrap {
   font-size: 1.45rem;
   font-weight: 600;
@@ -1084,6 +1181,13 @@ html.light .moon-icon { display: none; }
   padding: 1.75rem;
   display: flex;
   flex-direction: column;
+  transition: all var(--transition-smooth);
+}
+
+.strength-card:hover {
+  transform: translateY(-6px);
+  border-color: var(--flutter-cyan);
+  box-shadow: 0 16px 32px -8px rgba(0, 0, 0, 0.5), 0 0 25px var(--accent-glow);
 }
 
 .icon-circle {
@@ -1095,6 +1199,11 @@ html.light .moon-icon { display: none; }
   justify-content: center;
   font-size: 1.3rem;
   margin-bottom: 1rem;
+  transition: transform var(--transition-smooth);
+}
+
+.strength-card:hover .icon-circle {
+  transform: scale(1.12) rotate(6deg);
 }
 
 .flutter-accent {
@@ -1120,6 +1229,11 @@ html.light .moon-icon { display: none; }
   font-weight: 700;
   margin-bottom: 0.6rem;
   color: var(--text-main);
+  transition: color var(--transition-fast);
+}
+
+.strength-card:hover h4 {
+  color: var(--flutter-cyan);
 }
 
 .strength-card p {
@@ -1139,6 +1253,13 @@ html.light .moon-icon { display: none; }
   padding: 1.75rem;
   display: flex;
   flex-direction: column;
+  transition: all var(--transition-smooth);
+}
+
+.skill-cat-card:hover {
+  transform: translateY(-6px);
+  border-color: var(--flutter-cyan);
+  box-shadow: 0 16px 32px -8px rgba(0, 0, 0, 0.5), 0 0 25px var(--accent-glow);
 }
 
 .cat-header {
@@ -1160,6 +1281,11 @@ html.light .moon-icon { display: none; }
   justify-content: center;
   color: var(--flutter-cyan);
   font-size: 1.1rem;
+  transition: transform var(--transition-fast);
+}
+
+.skill-cat-card:hover .cat-icon {
+  transform: scale(1.1) rotate(5deg);
 }
 
 .cat-header h3 {
@@ -1167,6 +1293,11 @@ html.light .moon-icon { display: none; }
   font-size: 1.15rem;
   font-weight: 700;
   color: var(--text-main);
+  transition: color var(--transition-fast);
+}
+
+.skill-cat-card:hover .cat-header h3 {
+  color: var(--flutter-cyan);
 }
 
 .skills-tags-wrap {
@@ -1187,13 +1318,15 @@ html.light .moon-icon { display: none; }
   color: var(--text-muted);
   font-weight: 500;
   transition: all var(--transition-fast);
+  cursor: default;
 }
 
 .skill-tag:hover {
   border-color: var(--flutter-cyan);
-  color: var(--text-main);
-  background: rgba(84, 197, 248, 0.1);
-  transform: translateY(-2px);
+  color: #ffffff;
+  background: rgba(84, 197, 248, 0.2);
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 4px 15px var(--accent-glow);
 }
 
 .skill-tag.highlight {
@@ -1226,6 +1359,18 @@ html.light .moon-icon { display: none; }
   position: relative;
   margin-left: 55px;
   padding: 2.25rem;
+  transition: all var(--transition-smooth);
+}
+
+.timeline-card:hover {
+  transform: translateX(8px);
+  border-color: var(--flutter-cyan);
+  box-shadow: 0 16px 32px -8px rgba(0, 0, 0, 0.5), 0 0 25px var(--accent-glow);
+}
+
+.timeline-card:hover .timeline-badge-point {
+  transform: scale(1.15);
+  box-shadow: 0 0 25px var(--flutter-cyan);
 }
 
 .timeline-badge-point {
@@ -1345,7 +1490,7 @@ html.light .moon-icon { display: none; }
 /* ---------------- Dynamic Projects Showcase ---------------- */
 .projects-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: 2rem;
 }
 
@@ -1355,6 +1500,35 @@ html.light .moon-icon { display: none; }
   overflow: hidden;
   border-radius: 1.25rem;
   position: relative;
+  transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.project-card:hover {
+  transform: translateY(-8px);
+  border-color: var(--flutter-cyan);
+  box-shadow: 0 22px 45px -10px rgba(0, 0, 0, 0.6), 0 0 35px var(--accent-glow);
+}
+
+.project-card:hover .project-title {
+  color: var(--flutter-cyan);
+}
+
+.project-tags .tag {
+  padding: 0.25rem 0.6rem;
+  border-radius: 0.35rem;
+  background: var(--bg-secondary);
+  border: 1px solid var(--glass-border);
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  font-weight: 500;
+  transition: all var(--transition-fast);
+}
+
+.project-tags .tag:hover {
+  background: rgba(84, 197, 248, 0.15);
+  border-color: var(--flutter-cyan);
+  color: var(--flutter-cyan);
+  transform: translateY(-2px);
 }
 
 .project-banner {
@@ -1582,6 +1756,13 @@ html.light .moon-icon { display: none; }
   display: flex;
   gap: 1.5rem;
   align-items: flex-start;
+  transition: all var(--transition-smooth);
+}
+
+.edu-card:hover {
+  transform: translateY(-6px);
+  border-color: var(--flutter-cyan);
+  box-shadow: 0 16px 32px -8px rgba(0, 0, 0, 0.5), 0 0 25px var(--accent-glow);
 }
 
 .edu-icon-wrap {
@@ -1593,6 +1774,11 @@ html.light .moon-icon { display: none; }
   justify-content: center;
   font-size: 1.5rem;
   flex-shrink: 0;
+  transition: transform var(--transition-smooth);
+}
+
+.edu-card:hover .edu-icon-wrap {
+  transform: scale(1.12) rotate(6deg);
 }
 
 .edu-icon-wrap.university {
@@ -2166,34 +2352,46 @@ html.light .footer {
   padding: 2.5rem;
   border-radius: 0.5rem;
   font-family: var(--font-body);
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 15px rgba(0,0,0,0.12);
+}
+
+.resume-sheet-header {
+  text-align: center;
 }
 
 .resume-sheet-header h2 {
-  font-size: 1.8rem;
+  font-size: 1.85rem;
   font-weight: 900;
   color: #111827;
-  letter-spacing: -0.01em;
+  letter-spacing: 0.02em;
+  margin-bottom: 0.2rem;
 }
 
 .resume-sheet-role {
-  font-weight: 700;
+  font-weight: 800;
   color: #02569B;
-  font-size: 1.05rem;
-  margin-bottom: 0.4rem;
+  font-size: 0.95rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
 }
 
 .resume-sheet-contact {
   font-size: 0.82rem;
-  color: #4b5563;
-  line-height: 1.5;
+  color: #374151;
+  line-height: 1.6;
+}
+
+.resume-sheet-contact a {
+  color: #02569B;
+  text-decoration: underline;
 }
 
 .resume-hr {
   border: 0;
   height: 2px;
   background: #02569B;
-  margin: 1rem 0;
+  margin: 0.9rem 0 1.1rem 0;
 }
 
 .resume-sheet-section {
@@ -2204,38 +2402,76 @@ html.light .footer {
   font-size: 0.95rem;
   font-weight: 800;
   color: #111827;
-  border-bottom: 1px solid #e5e7eb;
+  border-bottom: 1.5px solid #d1d5db;
   padding-bottom: 0.2rem;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.55rem;
+  letter-spacing: 0.03em;
 }
 
 .resume-sheet-section p {
   font-size: 0.85rem;
-  line-height: 1.5;
+  line-height: 1.55;
   color: #374151;
 }
 
-.resume-exp-item, .resume-proj-item {
-  margin-bottom: 0.85rem;
+.resume-skills-grid-clean p {
+  margin-bottom: 0.35rem;
+  font-size: 0.84rem;
+  line-height: 1.45;
+}
+
+.resume-exp-item, .resume-proj-item, .resume-edu-item {
+  margin-bottom: 0.95rem;
 }
 
 .resume-exp-head {
   display: flex;
   justify-content: space-between;
+  align-items: baseline;
   font-size: 0.88rem;
   font-weight: 700;
   color: #111827;
 }
 
+.resume-exp-head strong {
+  color: #111827;
+}
+
+.resume-exp-head span {
+  color: #4b5563;
+  font-size: 0.82rem;
+  font-weight: 600;
+}
+
+.resume-proj-header {
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: #111827;
+  margin-bottom: 0.2rem;
+}
+
+.resume-links-line {
+  font-size: 0.78rem;
+  color: #4b5563;
+  margin-top: 0.3rem;
+  padding-left: 1.2rem;
+}
+
+.resume-links-line a {
+  color: #02569B;
+  text-decoration: underline;
+  word-break: break-all;
+}
+
 .resume-sheet ul {
   padding-left: 1.2rem;
-  margin-top: 0.3rem;
+  margin-top: 0.25rem;
 }
 
 .resume-sheet li {
   font-size: 0.83rem;
   color: #374151;
-  margin-bottom: 0.25rem;
+  margin-bottom: 0.3rem;
   line-height: 1.45;
 }
 
@@ -2372,8 +2608,19 @@ html.light .footer {
   .mobile-toggle {
     display: flex;
   }
+  .nav-resume-btn {
+    display: none;
+  }
   .hero-title {
     font-size: 2.5rem;
+  }
+  .hero-roles-banner {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.4rem;
+  }
+  .role-sep {
+    display: none;
   }
   .about-grid, .contact-grid, .edu-grid, .form-grid-2 {
     grid-template-columns: 1fr;
@@ -2397,11 +2644,64 @@ html.light .footer {
   .social-cards-grid {
     grid-template-columns: 1fr;
   }
+  .resume-sheet {
+    padding: 1.25rem;
+  }
+  .resume-exp-head {
+    flex-direction: column;
+    gap: 0.2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-title {
+    font-size: 2rem;
+  }
+  .hero-cta-group {
+    flex-direction: column;
+    width: 100%;
+  }
+  .hero-cta-group .btn {
+    width: 100%;
+  }
+  .stats-grid {
+    grid-template-columns: 1fr;
+    padding: 1.5rem;
+  }
+  .section {
+    padding: 4rem 0;
+  }
+  .hero-section {
+    padding-top: calc(var(--nav-height) + 1.5rem);
+  }
+  .contact-channel-card {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
+  }
+  .contact-channel-card .copy-btn {
+    align-self: flex-end;
+  }
 }
 
 @media print {
   body * {
     visibility: hidden;
+  }
+  .resume-modal, #resume-modal, .modal-overlay {
+    position: static !important;
+    background: transparent !important;
+    padding: 0 !important;
+  }
+  .modal-card {
+    box-shadow: none !important;
+    border: none !important;
+    background: transparent !important;
+    max-width: 100% !important;
+    padding: 0 !important;
+  }
+  .modal-header, .modal-footer, .navbar, .mesh-background, .back-to-top, .toast-container {
+    display: none !important;
   }
   .resume-sheet, .resume-sheet * {
     visibility: visible;
@@ -2411,5 +2711,8 @@ html.light .footer {
     left: 0;
     top: 0;
     width: 100%;
+    padding: 0 !important;
+    box-shadow: none !important;
+    border-radius: 0 !important;
   }
 }

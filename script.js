@@ -12,6 +12,9 @@ document.addEventListener('DOMContentLoaded', () => {
   initMobileMenu();
   initScrollSpy();
   initBackToTop();
+  initCardHoverTiltEffect();
+  initScrollReveal();
+  initStatsCounter();
 });
 
 // ---------------- 1. Typing Animation ---------------- //
@@ -20,11 +23,13 @@ function initTypewriter() {
   if (!typingElement) return;
 
   const roles = [
-    'Flutter & Dart Architecture',
+    'Flutter & Dart Development',
     'Cross-Platform iOS & Android Apps',
-    'Real-time WebSockets & Pusher',
-    'App Store & Google Play Releases',
-    'Firebase & REST API Integrations'
+    'Provider & Riverpod State Management',
+    'MVVM & Clean Architecture',
+    'Real-time Chat & Live Location Tracking',
+    'Google Play & Apple App Store Publishing',
+    'REST APIs & Firebase Integration'
   ];
 
   let roleIndex = 0;
@@ -262,6 +267,9 @@ function initProjects() {
 
     container.appendChild(card);
   });
+
+  // Re-bind 3D tilt effect on project cards
+  initCardHoverTiltEffect();
 }
 
 // ---------------- 6. Add Custom Project Modal Logic ---------------- //
@@ -499,3 +507,138 @@ function handleContactSubmit(e) {
   window.location.href = mailtoUrl;
   showToast('Opening your email client...', 'fa-solid fa-paper-plane');
 }
+
+// ---------------- 14. 3D Mouse Tilt & Interactive Hover Engine ---------------- //
+function initCardHoverTiltEffect() {
+  const tiltElements = document.querySelectorAll('.project-card, .skill-cat-card, .strength-card, .edu-card, .timeline-card, .developer-card, .stat-card, .social-box, .contact-channel-card');
+
+  tiltElements.forEach(card => {
+    if (card.dataset.tiltAttached === 'true') return;
+    card.dataset.tiltAttached = 'true';
+
+    card.style.transition = 'transform 0.25s cubic-bezier(0.25, 1, 0.5, 1), border-color 0.3s ease, box-shadow 0.3s ease';
+
+    card.addEventListener('mousemove', (e) => {
+      if (window.innerWidth < 768) return;
+
+      const rect = card.getBoundingClientRect();
+      const x = e.clientX - rect.left;
+      const y = e.clientY - rect.top;
+      const centerX = rect.width / 2;
+      const centerY = rect.height / 2;
+
+      const rotateX = ((y - centerY) / centerY) * -5;
+      const rotateY = ((x - centerX) / centerX) * 5;
+
+      card.style.transform = `perspective(900px) rotateX(${rotateX.toFixed(2)}deg) rotateY(${rotateY.toFixed(2)}deg) translateY(-8px) scale3d(1.01, 1.01, 1.01)`;
+    });
+
+    card.addEventListener('mouseleave', () => {
+      card.style.transform = '';
+    });
+  });
+}
+
+// ---------------- 15. Scroll-Triggered Reveal Animations ---------------- //
+function initScrollReveal() {
+  // Elements to animate on scroll
+  const targets = [
+    { selector: '.section-header', type: 'reveal-zoom' },
+    { selector: '.stat-card', type: 'reveal-zoom' },
+    { selector: '.about-card', type: 'reveal-left' },
+    { selector: '.strengths-grid .strength-card', type: 'reveal-right' },
+    { selector: '.skills-category-grid .skill-cat-card', type: 'reveal-zoom' },
+    { selector: '.timeline-container .timeline-card', type: 'reveal-left' },
+    { selector: '.projects-grid .project-card', type: 'reveal-zoom' },
+    { selector: '.edu-grid .edu-card', type: 'reveal-zoom' },
+    { selector: '.languages-box', type: 'reveal-zoom' },
+    { selector: '.contact-info-col', type: 'reveal-left' },
+    { selector: '.contact-form-col', type: 'reveal-right' }
+  ];
+
+  targets.forEach(group => {
+    const elements = document.querySelectorAll(group.selector);
+    elements.forEach((el, index) => {
+      el.classList.add('reveal-item');
+      if (group.type) el.classList.add(group.type);
+      
+      // Stagger child elements
+      const staggerClass = `stagger-${(index % 5) + 1}`;
+      el.classList.add(staggerClass);
+    });
+  });
+
+  const observerOptions = {
+    threshold: 0.12,
+    rootMargin: '0px 0px -40px 0px'
+  };
+
+  const revealObserver = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('is-revealed');
+        // Once revealed, unobserve to keep animation state clean
+        observer.unobserve(entry.target);
+      }
+    });
+  }, observerOptions);
+
+  document.querySelectorAll('.reveal-item').forEach(el => {
+    revealObserver.observe(el);
+  });
+}
+
+// ---------------- 16. Animated Number Counter ---------------- //
+function initStatsCounter() {
+  const statCards = document.querySelectorAll('.stat-number');
+  if (!statCards || statCards.length === 0) return;
+
+  const observerOptions = {
+    threshold: 0.5
+  };
+
+  let hasAnimated = false;
+
+  const statsObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting && !hasAnimated) {
+        hasAnimated = true;
+        animateCounters();
+      }
+    });
+  }, observerOptions);
+
+  const statsSection = document.querySelector('.stats-banner');
+  if (statsSection) statsObserver.observe(statsSection);
+
+  function animateCounters() {
+    statCards.forEach(stat => {
+      const target = parseInt(stat.getAttribute('data-target'), 10);
+      const originalText = stat.textContent.trim();
+      const suffix = originalText.replace(/[0-9]/g, ''); // Extract '+', '%', etc.
+      let current = 0;
+      const duration = 1500;
+      const startTime = performance.now();
+
+      function updateCounter(currentTime) {
+        const elapsed = currentTime - startTime;
+        const progress = Math.min(elapsed / duration, 1);
+        // Ease out expo
+        const easeProgress = progress === 1 ? 1 : 1 - Math.pow(2, -10 * progress);
+        current = Math.floor(easeProgress * target);
+
+        stat.textContent = current + suffix;
+
+        if (progress < 1) {
+          requestAnimationFrame(updateCounter);
+        } else {
+          stat.textContent = target + suffix;
+        }
+      }
+
+      requestAnimationFrame(updateCounter);
+    });
+  }
+}
+
+

@@ -22,7 +22,7 @@ farzid-portfolio/
 
 ### 1. প্রজেক্ট পরিবর্তন বা নতুন প্রজেক্ট অ্যাড করতে:
 Open `portfolio-data.js` in any code editor (VS Code, Sublime, Notepad):
-- Edit existing projects: **Direct Bazar**, **Iploy**, **BreathEasy222**, **Romeo Reminder**.
+- Edit existing projects: **Direct Bazar**, **Iploy**, **BreathEasy222**.
 - Add a new project by following the template commented at the bottom of the `projects` list.
 
 ### 2. কন্ট্যাক্ট ইনফো ও টেক্সট পরিবর্তন করতে:

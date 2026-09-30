@@ -3,23 +3,23 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>MD Farzid Ahmed | Senior Flutter Developer & Mobile App Engineer</title>
-  <meta name="description" content="Portfolio of MD Farzid Ahmed - Flutter Developer with 2+ years of experience building cross-platform mobile apps for Android & iOS with 5+ apps published on Play Store & App Store.">
-  <meta name="keywords" content="MD Farzid Ahmed, Flutter Developer, Dart, Mobile App Developer, Android, iOS, Firebase, REST API, Cross-Platform">
+  <title>MD Farzid Ahmed | Flutter Developer • Software Engineer • Mobile App Developer</title>
+  <meta name="description" content="Portfolio of MD Farzid Ahmed - Flutter Developer with 2+ years of experience building and shipping cross-platform mobile apps end-to-end, from architecture to Play Store/App Store release.">
+  <meta name="keywords" content="MD Farzid Ahmed, Flutter Developer, Software Engineer, Mobile App Developer, Dart, Android, iOS, Firebase, Provider, Riverpod, REST API, Play Store, App Store">
   <meta name="author" content="MD Farzid Ahmed">
 
-  <!-- Open Graph / Social -->
+  <!-- Open Graph / Social Meta Tags -->
   <meta property="og:type" content="website">
-  <meta property="og:title" content="MD Farzid Ahmed | Flutter Developer">
-  <meta property="og:description" content="2+ years building cross-platform apps with Flutter & Dart. 5+ apps published on App Store & Play Store.">
+  <meta property="og:title" content="MD Farzid Ahmed | Flutter Developer | Software Engineer">
+  <meta property="og:description" content="2+ years building & shipping cross-platform apps with Flutter & Dart. Published 5+ production apps on Google Play Store & Apple App Store.">
   <meta property="og:image" content="https://img.icons8.com/color/512/flutter.png">
 
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-  <!-- FontAwesome Icons -->
+  <!-- FontAwesome 6 Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
   <!-- Main Stylesheet -->
@@ -39,13 +39,13 @@
   <!-- Navigation Bar -->
   <header class="navbar" id="navbar">
     <div class="nav-container">
-      <a href="#hero" class="brand-logo">
+      <a href="#hero" class="brand-logo" aria-label="Farzid Ahmed Home">
         <div class="logo-icon">
           <i class="fa-brands fa-flutter"></i>
         </div>
         <div class="logo-text">
           <span class="name">Farzid<span class="dot">.dev</span></span>
-          <span class="role">Flutter Engineer</span>
+          <span class="role">Flutter Developer</span>
         </div>
       </a>
 
@@ -61,14 +61,14 @@
       <div class="nav-actions">
         <!-- Theme Color Palette Picker Trigger -->
         <div class="palette-dropdown-wrap">
-          <button class="palette-btn" id="palette-btn" aria-label="Change Background Theme Color" title="Change Background & Theme Color">
+          <button class="palette-btn" id="palette-btn" aria-label="Change Background Theme Color" title="Change Background & Accent Color">
             <i class="fa-solid fa-palette"></i>
             <span class="palette-dot-active"></span>
           </button>
           <div class="palette-dropdown" id="palette-dropdown">
             <div class="palette-header">
               <i class="fa-solid fa-wand-magic-sparkles"></i>
-              <span>Select Color Theme</span>
+              <span>Select Theme Color</span>
             </div>
             <div class="palette-options" id="palette-options">
               <!-- Dynamically Populated from portfolio-data.js -->
@@ -76,14 +76,21 @@
           </div>
         </div>
 
+        <button class="btn btn-sm btn-outline nav-resume-btn" onclick="openResumeModal()" title="View & Download Resume">
+          <i class="fa-solid fa-file-lines"></i>
+          <span>Resume</span>
+        </button>
+
         <a href="#contact" class="btn btn-sm btn-primary">
           <span>Let's Talk</span>
           <i class="fa-solid fa-arrow-right"></i>
         </a>
+
         <button class="theme-toggle" id="theme-toggle" aria-label="Toggle Light / Dark Mode">
           <i class="fa-solid fa-moon moon-icon"></i>
           <i class="fa-solid fa-sun sun-icon"></i>
         </button>
+
         <button class="mobile-toggle" id="mobile-toggle" aria-label="Open Menu">
           <span class="bar"></span>
           <span class="bar"></span>
@@ -100,12 +107,20 @@
         <div class="hero-content">
           <div class="status-pill">
             <span class="pulse-dot"></span>
-            <span>Available for Full-time & Contract Roles</span>
+            <span>Available for Opportunities & High-Impact Projects</span>
           </div>
 
           <h1 class="hero-title">
             Hi, I'm <span class="gradient-text">MD Farzid Ahmed</span>
           </h1>
+
+          <div class="hero-roles-banner">
+            <span class="role-badge"><i class="fa-brands fa-flutter"></i> Flutter Developer</span>
+            <span class="role-sep">•</span>
+            <span class="role-badge"><i class="fa-solid fa-laptop-code"></i> Software Engineer</span>
+            <span class="role-sep">•</span>
+            <span class="role-badge"><i class="fa-solid fa-mobile-screen-button"></i> Mobile App Developer</span>
+          </div>
 
           <div class="hero-typing-wrap">
             <span class="typing-prefix">Specialized in </span>
@@ -114,7 +129,7 @@
           </div>
 
           <p class="hero-desc">
-            Passionate <strong>Flutter Developer</strong> with <strong>2+ years of experience</strong> crafting high-performance, pixel-perfect, cross-platform mobile applications for Android & iOS. Proven track record of publishing <strong>5+ production apps</strong> on the Google Play Store and Apple App Store.
+            Flutter Developer with <strong>2+ years of experience</strong> building and shipping cross-platform mobile applications end-to-end, from architecture to <strong>Play Store/App Store release</strong>. Strong in state management (<strong>Provider, Riverpod</strong>), REST API integration, Firebase, and real-time features (chat, live location, push notifications). Published <strong>5+ apps</strong> with live production traffic and measurable performance improvements.
           </p>
 
           <!-- Quick Contacts Pills -->
@@ -123,11 +138,11 @@
               <i class="fa-solid fa-location-dot chip-icon"></i>
               <span>Mohakhali, Dhaka, Bangladesh</span>
             </div>
-            <a href="tel:+8801751757891" class="chip clickable">
+            <a href="tel:+8801751757891" class="chip clickable" title="Call Farzid">
               <i class="fa-solid fa-phone chip-icon"></i>
               <span>+880 1751757891</span>
             </a>
-            <a href="mailto:farzidahmed150@gmail.com" class="chip clickable">
+            <a href="mailto:farzidahmed150@gmail.com" class="chip clickable" title="Email Farzid">
               <i class="fa-solid fa-envelope chip-icon"></i>
               <span>farzidahmed150@gmail.com</span>
             </a>
@@ -139,18 +154,18 @@
               <i class="fa-solid fa-rocket"></i>
               <span>Explore Live Apps</span>
             </a>
-            <a href="https://github.com/farzidahmed" target="_blank" rel="noopener noreferrer" class="btn btn-glass">
+            <button class="btn btn-outline" id="resume-btn" onclick="openResumeModal()">
+              <i class="fa-solid fa-file-pdf"></i>
+              <span>Interactive Resume</span>
+            </button>
+            <a href="https://github.com/farzidahmed" target="_blank" rel="noopener noreferrer" class="btn btn-glass" title="GitHub Profile">
               <i class="fa-brands fa-github"></i>
               <span>GitHub</span>
             </a>
-            <a href="https://linkedin.com/in/farzid-ahmed" target="_blank" rel="noopener noreferrer" class="btn btn-glass">
+            <a href="https://linkedin.com/in/farzid-ahmed" target="_blank" rel="noopener noreferrer" class="btn btn-glass" title="LinkedIn Profile">
               <i class="fa-brands fa-linkedin-in"></i>
               <span>LinkedIn</span>
             </a>
-            <button class="btn btn-outline" id="resume-btn" onclick="openResumeModal()">
-              <i class="fa-solid fa-file-arrow-down"></i>
-              <span>View Resume</span>
-            </button>
           </div>
         </div>
 
@@ -186,13 +201,14 @@
                   <span class="dot red"></span>
                   <span class="dot yellow"></span>
                   <span class="dot green"></span>
-                  <span class="code-file">farzid_skills.dart</span>
+                  <span class="code-file">farzid_profile.dart</span>
                 </div>
-                <pre><code><span class="k">class</span> <span class="c">FlutterDev</span> {
+                <pre><code><span class="k">class</span> <span class="c">FlutterEngineer</span> {
   <span class="k">final</span> String name = <span class="s">"MD Farzid Ahmed"</span>;
   <span class="k">final</span> int publishedApps = <span class="n">5</span>;
-  <span class="k">final</span> double crashFreeRate = <span class="n">0.99</span>;
-  <span class="k">final</span> bool readyToHire = <span class="k">true</span>;
+  <span class="k">final</span> int crossPlatformProjects = <span class="n">10</span>;
+  <span class="k">final</span> double crashFreeStability = <span class="n">0.90</span>;
+  <span class="k">final</span> bool readyForNewRoles = <span class="k">true</span>;
 }</code></pre>
               </div>
 
@@ -200,7 +216,7 @@
               <div class="hero-mini-metrics">
                 <div class="metric-item">
                   <span class="metric-val">2+</span>
-                  <span class="metric-lbl">Years Experience</span>
+                  <span class="metric-lbl">Years Exp</span>
                 </div>
                 <div class="metric-item">
                   <span class="metric-val">5+</span>
@@ -247,7 +263,7 @@
             </div>
             <div class="stat-info">
               <h3 class="stat-number" data-target="30">30%</h3>
-              <p class="stat-label">Efficiency Boost Achieved</p>
+              <p class="stat-label">Code & Memory Efficiency</p>
             </div>
           </div>
           <div class="stat-divider"></div>
@@ -268,9 +284,9 @@
     <section class="section about-section" id="about">
       <div class="container">
         <div class="section-header">
-          <span class="section-badge"><i class="fa-solid fa-user-tie"></i> Summary</span>
+          <span class="section-badge"><i class="fa-solid fa-user-tie"></i> Executive Summary</span>
           <h2 class="section-title">About <span class="gradient-text">My Engineering Journey</span></h2>
-          <p class="section-subtitle">Dedicated Flutter professional focused on robust architectures, fluid 60FPS UI animations, and seamless backend integrations.</p>
+          <p class="section-subtitle">Dedicated Flutter professional focused on robust architectures, real-time features, fluid UI animations, and seamless backend integrations.</p>
         </div>
 
         <div class="about-grid">
@@ -278,12 +294,12 @@
             <div class="about-card-icon">
               <i class="fa-solid fa-quote-left"></i>
             </div>
-            <h3 class="about-card-title">Professional Profile</h3>
+            <h3 class="about-card-title">Professional Summary</h3>
             <p class="about-text">
-              I am a <strong>Flutter Developer with 2+ years of experience</strong> building cross-platform mobile applications using <strong>Flutter, Dart, Firebase, and REST APIs</strong>.
+              I am a <strong>Flutter Developer with 2+ years of experience</strong> building and shipping cross-platform mobile applications end-to-end, from architecture to <strong>Play Store/App Store release</strong>.
             </p>
             <p class="about-text">
-              Skilled in modern <strong>state management (Provider)</strong>, Google Maps integration, payment gateways (Stripe, RevenueCat), and real-time communication (WebSockets, Socket.IO, Pusher). I have independently and collaboratively published <strong>5+ mobile apps end-to-end</strong> on the <strong>Google Play Store</strong> and <strong>Apple App Store</strong>.
+              Strong in state management (<strong>Provider, Riverpod</strong>), REST API integration, Firebase (Auth, Firestore, FCM), and real-time features (chat, live location tracking, push notifications). Published <strong>5+ apps with live production traffic</strong> and measurable performance improvements.
             </p>
 
             <div class="social-links-row">
@@ -303,32 +319,32 @@
               <div class="icon-circle flutter-accent">
                 <i class="fa-brands fa-flutter"></i>
               </div>
-              <h4>Cross-Platform Mastery</h4>
-              <p>One single codebase for iOS and Android with zero compromises on native speed, responsiveness, and feel.</p>
+              <h4>Architecture & State Management</h4>
+              <p>Specialized in MVVM and Repository Pattern using Provider and Riverpod for modular, testable, and scalable codebases.</p>
             </div>
 
             <div class="strength-card glass-panel">
               <div class="icon-circle store-accent">
                 <i class="fa-solid fa-cloud-arrow-up"></i>
               </div>
-              <h4>Full Lifecycle Deployment</h4>
-              <p>Managing 100% of certificate provisioning, Apple TestFlight, App Store Connect, Google Play Console release tracks, and CI/CD pipelines.</p>
+              <h4>Full Release & Deployment</h4>
+              <p>Managing 100% of certificate provisioning, Apple App Store Connect, Google Play Console release tracks, and CI/CD Fastlane pipelines.</p>
             </div>
 
             <div class="strength-card glass-panel">
               <div class="icon-circle real-time-accent">
                 <i class="fa-solid fa-bolt"></i>
               </div>
-              <h4>Real-time & State Control</h4>
-              <p>Seamless data flow with WebSockets, Socket.IO, Pusher, Provider state architecture, and reactive cloud synchronization.</p>
+              <h4>Real-time Chat & Live Location</h4>
+              <p>Seamless data flow with WebSockets, Socket.IO, Pusher, Firebase Cloud Messaging, and live GPS geolocation tracking.</p>
             </div>
 
             <div class="strength-card glass-panel">
               <div class="icon-circle security-accent">
                 <i class="fa-solid fa-credit-card"></i>
               </div>
-              <h4>Monetization & Payments</h4>
-              <p>Experience integrating Stripe Payment Gateway, RevenueCat in-app subscriptions, and secured OAuth role-based auth.</p>
+              <h4>Monetization & Payment Gateways</h4>
+              <p>Proven track record integrating Stripe Payment Gateway, RevenueCat subscriptions, and OAuth social authentication (Google & Apple).</p>
             </div>
           </div>
         </div>
@@ -339,100 +355,126 @@
     <section class="section skills-section" id="skills">
       <div class="container">
         <div class="section-header">
-          <span class="section-badge"><i class="fa-solid fa-sliders"></i> Arsenal</span>
-          <h2 class="section-title">Technical <span class="gradient-text">Skills & Toolkit</span></h2>
-          <p class="section-subtitle">Categorized technologies and tools utilized across production applications.</p>
+          <span class="section-badge"><i class="fa-solid fa-sliders"></i> Technical Arsenal</span>
+          <h2 class="section-title">Technical <span class="gradient-text">Skills & Frameworks</span></h2>
+          <p class="section-subtitle">Structured taxonomy based on production applications and industry best practices.</p>
         </div>
 
-        <div class="skills-category-grid">
+        <div class="skills-category-grid" id="skills-grid">
           
-          <!-- Category 1 -->
+          <!-- Category 1: Languages & Framework -->
           <div class="skill-cat-card glass-panel">
             <div class="cat-header">
-              <div class="cat-icon"><i class="fa-solid fa-layer-group"></i></div>
-              <h3>Core & Frameworks</h3>
+              <div class="cat-icon"><i class="fa-solid fa-code"></i></div>
+              <h3>Languages & Framework</h3>
             </div>
             <div class="skills-tags-wrap">
               <span class="skill-tag highlight"><i class="fa-brands fa-flutter"></i> Flutter</span>
-              <span class="skill-tag highlight"><i class="fa-solid fa-code"></i> Dart</span>
-              <span class="skill-tag"><i class="fa-brands fa-android"></i> Android SDK</span>
-              <span class="skill-tag"><i class="fa-brands fa-apple"></i> iOS Development</span>
+              <span class="skill-tag highlight"><i class="fa-solid fa-terminal"></i> Dart</span>
+              <span class="skill-tag"><i class="fa-brands fa-android"></i> Android</span>
+              <span class="skill-tag"><i class="fa-brands fa-apple"></i> iOS</span>
               <span class="skill-tag"><i class="fa-solid fa-mobile"></i> Cross-Platform</span>
             </div>
           </div>
 
-          <!-- Category 2 -->
+          <!-- Category 2: State Management -->
           <div class="skill-cat-card glass-panel">
             <div class="cat-header">
-              <div class="cat-icon"><i class="fa-solid fa-diagram-project"></i></div>
-              <h3>State & Architecture</h3>
+              <div class="cat-icon"><i class="fa-solid fa-cubes"></i></div>
+              <h3>State Management</h3>
             </div>
             <div class="skills-tags-wrap">
-              <span class="skill-tag highlight"><i class="fa-solid fa-cubes"></i> Provider</span>
-              <span class="skill-tag"><i class="fa-solid fa-arrows-split-up-and-left"></i> REST APIs</span>
-              <span class="skill-tag"><i class="fa-solid fa-plug"></i> WebSockets</span>
-              <span class="skill-tag"><i class="fa-solid fa-network-wired"></i> Socket.IO</span>
-              <span class="skill-tag"><i class="fa-solid fa-tower-broadcast"></i> Pusher</span>
+              <span class="skill-tag highlight"><i class="fa-solid fa-cube"></i> Provider</span>
+              <span class="skill-tag highlight"><i class="fa-solid fa-water"></i> Riverpod</span>
+              <span class="skill-tag"><i class="fa-solid fa-arrows-rotate"></i> Reactive State</span>
+              <span class="skill-tag"><i class="fa-solid fa-diagram-project"></i> State Observers</span>
             </div>
           </div>
 
-          <!-- Category 3 -->
+          <!-- Category 3: Architecture -->
+          <div class="skill-cat-card glass-panel">
+            <div class="cat-header">
+              <div class="cat-icon"><i class="fa-solid fa-sitemap"></i></div>
+              <h3>Architecture</h3>
+            </div>
+            <div class="skills-tags-wrap">
+              <span class="skill-tag highlight"><i class="fa-solid fa-diagram-project"></i> MVVM Pattern</span>
+              <span class="skill-tag highlight"><i class="fa-solid fa-boxes-stacked"></i> Repository Pattern</span>
+              <span class="skill-tag"><i class="fa-solid fa-shield-halved"></i> Clean Architecture</span>
+              <span class="skill-tag"><i class="fa-solid fa-puzzle-piece"></i> Modular Design</span>
+            </div>
+          </div>
+
+          <!-- Category 4: Backend & APIs -->
+          <div class="skill-cat-card glass-panel">
+            <div class="cat-header">
+              <div class="cat-icon"><i class="fa-solid fa-network-wired"></i></div>
+              <h3>Backend & APIs</h3>
+            </div>
+            <div class="skills-tags-wrap">
+              <span class="skill-tag highlight"><i class="fa-solid fa-arrows-split-up-and-left"></i> REST API</span>
+              <span class="skill-tag highlight"><i class="fa-solid fa-plug"></i> WebSockets</span>
+              <span class="skill-tag"><i class="fa-solid fa-bolt"></i> Socket.IO</span>
+              <span class="skill-tag highlight"><i class="fa-solid fa-fire"></i> Firebase (Auth, Firestore, FCM)</span>
+            </div>
+          </div>
+
+          <!-- Category 5: Storage -->
           <div class="skill-cat-card glass-panel">
             <div class="cat-header">
               <div class="cat-icon"><i class="fa-solid fa-database"></i></div>
-              <h3>Database & Cloud Services</h3>
+              <h3>Storage & Caching</h3>
             </div>
             <div class="skills-tags-wrap">
-              <span class="skill-tag highlight"><i class="fa-solid fa-fire"></i> Firebase Auth</span>
-              <span class="skill-tag"><i class="fa-solid fa-cloud"></i> Cloud Firestore</span>
-              <span class="skill-tag"><i class="fa-solid fa-database"></i> SQFlite (Local DB)</span>
-              <span class="skill-tag"><i class="fa-solid fa-bell"></i> Push Notifications (FCM)</span>
-              <span class="skill-tag"><i class="fa-solid fa-server"></i> Cloud Messaging</span>
+              <span class="skill-tag highlight"><i class="fa-solid fa-table"></i> SQLite / SQFlite</span>
+              <span class="skill-tag highlight"><i class="fa-solid fa-box-archive"></i> Hive</span>
+              <span class="skill-tag"><i class="fa-solid fa-key"></i> SharedPreferences</span>
+              <span class="skill-tag"><i class="fa-solid fa-memory"></i> Offline Caching</span>
             </div>
           </div>
 
-          <!-- Category 4 -->
+          <!-- Category 6: Integrations -->
           <div class="skill-cat-card glass-panel">
             <div class="cat-header">
-              <div class="cat-icon"><i class="fa-solid fa-puzzle-piece"></i></div>
-              <h3>APIs, Payments & Integrations</h3>
+              <div class="cat-icon"><i class="fa-solid fa-plug-circle-bolt"></i></div>
+              <h3>Integrations</h3>
             </div>
             <div class="skills-tags-wrap">
               <span class="skill-tag highlight"><i class="fa-solid fa-map-location-dot"></i> Google Maps API</span>
-              <span class="skill-tag highlight"><i class="fa-brands fa-stripe"></i> Stripe Gateway</span>
+              <span class="skill-tag highlight"><i class="fa-brands fa-stripe"></i> Stripe Payment</span>
               <span class="skill-tag"><i class="fa-solid fa-receipt"></i> RevenueCat</span>
               <span class="skill-tag"><i class="fa-solid fa-id-badge"></i> Social Logins (Google/Apple)</span>
-              <span class="skill-tag"><i class="fa-solid fa-link"></i> 3rd Party REST Services</span>
+              <span class="skill-tag"><i class="fa-solid fa-link"></i> Third-Party APIs</span>
             </div>
           </div>
 
-          <!-- Category 5 -->
+          <!-- Category 7: Testing & Tooling -->
           <div class="skill-cat-card glass-panel">
             <div class="cat-header">
-              <div class="cat-icon"><i class="fa-solid fa-gears"></i></div>
-              <h3>Deployment & DevOps</h3>
+              <div class="cat-icon"><i class="fa-solid fa-vial-circle-check"></i></div>
+              <h3>Testing & Tooling</h3>
             </div>
             <div class="skills-tags-wrap">
-              <span class="skill-tag highlight"><i class="fa-brands fa-google-play"></i> Google Play Console</span>
-              <span class="skill-tag highlight"><i class="fa-brands fa-app-store-ios"></i> App Store Connect</span>
+              <span class="skill-tag highlight"><i class="fa-solid fa-vial"></i> Unit Testing</span>
+              <span class="skill-tag"><i class="fa-solid fa-mobile-button"></i> Widget Testing</span>
+              <span class="skill-tag highlight"><i class="fa-brands fa-git-alt"></i> Git & GitHub</span>
+              <span class="skill-tag"><i class="fa-solid fa-infinity"></i> CI/CD (Fastlane)</span>
+              <span class="skill-tag"><i class="fa-solid fa-bug"></i> QA Debugging</span>
+            </div>
+          </div>
+
+          <!-- Category 8: Deployment -->
+          <div class="skill-cat-card glass-panel">
+            <div class="cat-header">
+              <div class="cat-icon"><i class="fa-solid fa-cloud-arrow-up"></i></div>
+              <h3>Deployment</h3>
+            </div>
+            <div class="skills-tags-wrap">
+              <span class="skill-tag highlight"><i class="fa-brands fa-app-store-ios"></i> App Store Publishing</span>
+              <span class="skill-tag highlight"><i class="fa-brands fa-google-play"></i> Play Store Publishing</span>
+              <span class="skill-tag highlight"><i class="fa-solid fa-bell"></i> Push Notifications</span>
               <span class="skill-tag"><i class="fa-solid fa-plane-departure"></i> TestFlight</span>
-              <span class="skill-tag"><i class="fa-solid fa-infinity"></i> CI/CD Pipelines</span>
-              <span class="skill-tag"><i class="fa-brands fa-git-alt"></i> Git & GitHub</span>
-            </div>
-          </div>
-
-          <!-- Category 6 -->
-          <div class="skill-cat-card glass-panel">
-            <div class="cat-header">
-              <div class="cat-icon"><i class="fa-solid fa-award"></i></div>
-              <h3>Practices & Quality</h3>
-            </div>
-            <div class="skills-tags-wrap">
-              <span class="skill-tag"><i class="fa-solid fa-gauge-simple-high"></i> Performance Tuning</span>
-              <span class="skill-tag"><i class="fa-solid fa-bug-slash"></i> QA & Crashlytics</span>
-              <span class="skill-tag"><i class="fa-solid fa-paint-roller"></i> Clean Code Standards</span>
-              <span class="skill-tag"><i class="fa-solid fa-users"></i> Agile Collaboration</span>
-              <span class="skill-tag"><i class="fa-solid fa-shield-cat"></i> Role-based Access Control</span>
+              <span class="skill-tag"><i class="fa-solid fa-mobile"></i> Cross-Platform Dev</span>
             </div>
           </div>
 
@@ -444,14 +486,14 @@
     <section class="section experience-section" id="experience">
       <div class="container">
         <div class="section-header">
-          <span class="section-badge"><i class="fa-solid fa-timeline"></i> Career</span>
+          <span class="section-badge"><i class="fa-solid fa-timeline"></i> Professional Path</span>
           <h2 class="section-title">Work <span class="gradient-text">Experience</span></h2>
-          <p class="section-subtitle">Real-world commercial experience delivering enterprise and consumer-facing apps.</p>
+          <p class="section-subtitle">Commercial track record delivering production-grade applications for companies and clients.</p>
         </div>
 
         <div class="timeline-container">
           
-          <!-- Experience 1 -->
+          <!-- Experience 1: Softvence -->
           <div class="timeline-card glass-panel active-role">
             <div class="timeline-badge-point">
               <i class="fa-solid fa-briefcase"></i>
@@ -464,36 +506,37 @@
               </div>
               <div class="role-date-badge current">
                 <i class="fa-regular fa-calendar-check"></i>
-                <span>January 2025 – Present</span>
+                <span>January 2025 – August 2026</span>
               </div>
             </div>
 
             <ul class="role-achievements">
               <li>
-                <i class="fa-solid fa-check-circle achievement-bullet"></i>
-                <span>Developed strong expertise in <strong>Flutter</strong> by delivering <strong>10+ cross-platform projects</strong>, significantly improving both front-end UI quality and seamless back-end integration.</span>
+                <i class="fa-solid fa-circle-check achievement-bullet"></i>
+                <span>Developed strong expertise in Flutter by delivering <strong>10+ cross-platform projects</strong>, improving both front-end UI quality and back-end integration.</span>
               </li>
               <li>
-                <i class="fa-solid fa-check-circle achievement-bullet"></i>
-                <span>Improved code efficiency by <strong>30%</strong> through optimized, refactored codebases and modern mobile development architectural best practices.</span>
+                <i class="fa-solid fa-circle-check achievement-bullet"></i>
+                <span>Improved code efficiency by <strong>30%</strong> through optimized, refactored code and modern mobile development best practices.</span>
               </li>
               <li>
-                <i class="fa-solid fa-check-circle achievement-bullet"></i>
-                <span>Published <strong>5+ mobile applications</strong> on the <strong>Google Play Store</strong> and <strong>Apple App Store</strong>, managing 100% of the deployment, beta testing, and release processes.</span>
+                <i class="fa-solid fa-circle-check achievement-bullet"></i>
+                <span>Published <strong>5+ mobile applications</strong> on the <strong>Google Play Store and Apple App Store</strong>, managing 100% of the deployment, testing, and release process.</span>
               </li>
             </ul>
 
             <div class="role-tech-stack">
               <span class="tech-pill">Flutter</span>
               <span class="tech-pill">Dart</span>
-              <span class="tech-pill">App Store Deployment</span>
-              <span class="tech-pill">Play Store Deployment</span>
+              <span class="tech-pill">App Store Release</span>
+              <span class="tech-pill">Play Store Release</span>
               <span class="tech-pill">REST APIs</span>
               <span class="tech-pill">Firebase</span>
+              <span class="tech-pill">Architecture Refactoring</span>
             </div>
           </div>
 
-          <!-- Experience 2 -->
+          <!-- Experience 2: BdTask -->
           <div class="timeline-card glass-panel">
             <div class="timeline-badge-point">
               <i class="fa-solid fa-laptop-code"></i>
@@ -512,21 +555,21 @@
 
             <ul class="role-achievements">
               <li>
-                <i class="fa-solid fa-check-circle achievement-bullet"></i>
-                <span>Collaborated with a team of <strong>5+ senior developers</strong> to deliver 2 cross-platform apps, contributing <strong>15+ reusable UI components</strong> and integrating <strong>30+ REST API endpoints</strong>.</span>
+                <i class="fa-solid fa-circle-check achievement-bullet"></i>
+                <span>Collaborated with a team of <strong>5+ senior developers</strong> to deliver 2 cross-platform apps, contributing <strong>15+ UI components</strong> and integrating <strong>30+ REST API endpoints</strong>.</span>
               </li>
               <li>
-                <i class="fa-solid fa-check-circle achievement-bullet"></i>
-                <span>Coordinated testing and validation to ensure strict compliance with industry standards, <strong>reducing bugs by 20%</strong> through systematic QA and unit testing processes.</span>
+                <i class="fa-solid fa-circle-check achievement-bullet"></i>
+                <span>Coordinated testing and validation to ensure compliance with industry standards, <strong>reducing reported bugs by 20%</strong> through systematic QA processes.</span>
               </li>
             </ul>
 
             <div class="role-tech-stack">
               <span class="tech-pill">Flutter</span>
               <span class="tech-pill">Dart</span>
-              <span class="tech-pill">Provider</span>
-              <span class="tech-pill">30+ REST Endpoints</span>
-              <span class="tech-pill">QA & Debugging</span>
+              <span class="tech-pill">30+ REST APIs</span>
+              <span class="tech-pill">15+ UI Components</span>
+              <span class="tech-pill">QA & Bug Reduction</span>
               <span class="tech-pill">Team Collaboration</span>
             </div>
           </div>
@@ -535,14 +578,14 @@
       </div>
     </section>
 
-    <!-- Projects Section (Dynamically Powered & Easily Customizable) -->
+    <!-- Projects Section (Dynamically Powered from portfolio-data.js) -->
     <section class="section projects-section" id="projects">
       <div class="container">
         <div class="section-header-flex">
           <div class="section-header-text">
-            <span class="section-badge"><i class="fa-solid fa-rocket"></i> Portfolio Showcase</span>
-            <h2 class="section-title">Featured <span class="gradient-text">Production Projects</span></h2>
-            <p class="section-subtitle">Real apps published on Google Play Store and Apple App Store. Easily editable from <code>portfolio-data.js</code>.</p>
+            <span class="section-badge"><i class="fa-solid fa-rocket"></i> Production Portfolio</span>
+            <h2 class="section-title">Featured <span class="gradient-text">Live Projects</span></h2>
+            <p class="section-subtitle">Real commercial mobile applications published on Google Play Store & Apple App Store.</p>
           </div>
           
           <div class="projects-actions-bar">
@@ -555,7 +598,7 @@
 
         <!-- Dynamic Projects Grid loaded from portfolio-data.js -->
         <div class="projects-grid" id="dynamic-projects-grid">
-          <!-- Will be rendered dynamically via script.js & portfolio-data.js -->
+          <!-- Rendered dynamically via script.js -->
         </div>
       </div>
     </section>
@@ -564,40 +607,40 @@
     <section class="section education-section" id="education">
       <div class="container">
         <div class="section-header">
-          <span class="section-badge"><i class="fa-solid fa-graduation-cap"></i> Background</span>
+          <span class="section-badge"><i class="fa-solid fa-graduation-cap"></i> Academic Foundations</span>
           <h2 class="section-title">Education & <span class="gradient-text">Languages</span></h2>
-          <p class="section-subtitle">Academic foundations in Computer Science & Engineering.</p>
+          <p class="section-subtitle">Formal studies and technical degrees in Computer Science & Engineering.</p>
         </div>
 
         <div class="edu-grid">
           
-          <!-- Education 1 -->
+          <!-- Education 1: BSc -->
           <div class="edu-card glass-panel">
             <div class="edu-icon-wrap university">
               <i class="fa-solid fa-building-columns"></i>
             </div>
             <div class="edu-content">
-              <div class="edu-status in-progress">In Progress</div>
+              <div class="edu-status in-progress">Expected 2028</div>
               <h3 class="edu-degree">BSc in Computer Science & Engineering</h3>
               <h4 class="edu-institution"><i class="fa-solid fa-location-dot"></i> European University of Bangladesh</h4>
-              <p class="edu-desc">Deepening core engineering concepts in algorithms, software architecture, data structures, distributed systems, and modern mobile computing.</p>
+              <p class="edu-desc">Deepening core concepts in data structures, algorithms, object-oriented software engineering, distributed systems, and mobile architectures.</p>
             </div>
           </div>
 
-          <!-- Education 2 -->
+          <!-- Education 2: Diploma -->
           <div class="edu-card glass-panel">
             <div class="edu-icon-wrap polytechnic">
               <i class="fa-solid fa-award"></i>
             </div>
             <div class="edu-content">
-              <div class="edu-status completed">Completed 2024</div>
+              <div class="edu-status completed">Graduated 2024</div>
               <h3 class="edu-degree">Diploma in Computer Science & Technology</h3>
               <h4 class="edu-institution"><i class="fa-solid fa-location-dot"></i> Faridpur Polytechnic Institute, Faridpur</h4>
               <div class="cgpa-badge">
                 <i class="fa-solid fa-star"></i>
                 <span>CGPA: <strong>3.62 / 4.00</strong></span>
               </div>
-              <p class="edu-desc">Comprehensive foundation in object-oriented programming, database management, software development lifecycles, and networking.</p>
+              <p class="edu-desc">Rigorous technical curriculum in computer programming, database systems, networking, system architecture, and software development methodologies.</p>
             </div>
           </div>
 
@@ -609,7 +652,7 @@
             <i class="fa-solid fa-language lang-main-icon"></i>
             <div>
               <h3>Language Proficiency</h3>
-              <p>Effective communication for global and local agile teams</p>
+              <p>Effective communication for global distributed engineering teams</p>
             </div>
           </div>
           <div class="lang-chips-grid">
@@ -637,9 +680,9 @@
     <section class="section contact-section" id="contact">
       <div class="container">
         <div class="section-header">
-          <span class="section-badge"><i class="fa-solid fa-envelope-open-text"></i> Reach Out</span>
-          <h2 class="section-title">Let's Build Something <span class="gradient-text">Extraordinary</span></h2>
-          <p class="section-subtitle">Interested in collaborating or hiring? Reach out via phone, email, or social profiles.</p>
+          <span class="section-badge"><i class="fa-solid fa-envelope-open-text"></i> Get In Touch</span>
+          <h2 class="section-title">Let's Build Something <span class="gradient-text">Exceptional</span></h2>
+          <p class="section-subtitle">Looking for an experienced Flutter Developer for your team or mobile product? Reach out directly!</p>
         </div>
 
         <div class="contact-grid">
@@ -692,7 +735,7 @@
                 <i class="fa-brands fa-github"></i>
                 <div class="social-box-text">
                   <strong>GitHub</strong>
-                  <span>@farzidahmed</span>
+                  <span>github.com/farzidahmed</span>
                 </div>
                 <i class="fa-solid fa-arrow-up-right-from-square link-arrow"></i>
               </a>
@@ -701,7 +744,7 @@
                 <i class="fa-brands fa-linkedin-in"></i>
                 <div class="social-box-text">
                   <strong>LinkedIn</strong>
-                  <span>@farzid-ahmed</span>
+                  <span>linkedin.com/in/farzid-ahmed</span>
                 </div>
                 <i class="fa-solid fa-arrow-up-right-from-square link-arrow"></i>
               </a>
@@ -712,15 +755,15 @@
           <!-- Quick Message Form -->
           <div class="contact-form-col">
             <div class="contact-form-card glass-panel">
-              <h3 class="form-title"><i class="fa-regular fa-paper-plane"></i> Send a Direct Message</h3>
-              <p class="form-desc">Fill in the details below to start a conversation directly via your email client.</p>
+              <h3 class="form-title"><i class="fa-regular fa-paper-plane"></i> Send Direct Message</h3>
+              <p class="form-desc">Send your inquiry or project details directly to Farzid's inbox.</p>
 
               <form id="contact-form" onsubmit="handleContactSubmit(event)">
                 <div class="form-group">
                   <label for="sender-name">Your Name</label>
                   <div class="input-wrap">
                     <i class="fa-regular fa-user input-icon"></i>
-                    <input type="text" id="sender-name" placeholder="e.g. John Doe" required>
+                    <input type="text" id="sender-name" placeholder="e.g. Hiring Manager / Client" required>
                   </div>
                 </div>
 
@@ -728,7 +771,7 @@
                   <label for="sender-subject">Subject</label>
                   <div class="input-wrap">
                     <i class="fa-solid fa-tag input-icon"></i>
-                    <input type="text" id="sender-subject" placeholder="e.g. Flutter Project Inquiry" required>
+                    <input type="text" id="sender-subject" placeholder="e.g. Flutter Developer Opportunity" required>
                   </div>
                 </div>
 
@@ -736,7 +779,7 @@
                   <label for="sender-message">Message</label>
                   <div class="input-wrap">
                     <i class="fa-regular fa-comment-dots input-icon textarea-icon"></i>
-                    <textarea id="sender-message" rows="4" placeholder="Hi Farzid, I'd like to discuss an opportunity..." required></textarea>
+                    <textarea id="sender-message" rows="4" placeholder="Hi Farzid, I reviewed your portfolio and would like to discuss..." required></textarea>
                   </div>
                 </div>
 
@@ -762,7 +805,7 @@
         </div>
         <div>
           <span class="footer-title">MD Farzid Ahmed</span>
-          <p class="footer-sub">Flutter & Cross-Platform Mobile Engineer</p>
+          <p class="footer-sub">Flutter Developer | Software Engineer | Mobile App Developer</p>
         </div>
       </div>
 
@@ -772,119 +815,179 @@
         <a href="#skills">Skills</a>
         <a href="#experience">Experience</a>
         <a href="#projects">Projects</a>
+        <a href="#education">Education</a>
         <a href="#contact">Contact</a>
       </div>
 
       <div class="footer-bottom">
-        <p>© 2026 MD Farzid Ahmed. Designed & Built with ❤️ for Flutter Excellence.</p>
+        <p>© 2026 MD Farzid Ahmed. Designed & Built for High-Performance Mobile Engineering.</p>
       </div>
     </div>
   </footer>
 
-  <!-- Resume Modal -->
+  <!-- Resume Interactive Modal (Clean, Pixel-Perfect Layout matching Resume) -->
   <div class="modal-overlay" id="resume-modal" onclick="closeResumeModal(event)">
     <div class="modal-card glass-panel" onclick="event.stopPropagation()">
       <div class="modal-header">
         <div class="modal-title-wrap">
-          <i class="fa-solid fa-file-lines modal-icon"></i>
+          <i class="fa-solid fa-file-pdf modal-icon"></i>
           <div>
-            <h3>MD Farzid Ahmed - Resume Overview</h3>
-            <small>Flutter Developer • 2+ Years Commercial Experience</small>
+            <h3>MD Farzid Ahmed - Curriculum Vitae</h3>
+            <small>Flutter Developer • Software Engineer • Mobile App Developer</small>
           </div>
         </div>
-        <button class="modal-close-btn" onclick="closeResumeModal()">
-          <i class="fa-solid fa-xmark"></i>
-        </button>
+        <div style="display: flex; gap: 0.5rem; align-items: center;">
+          <button class="btn btn-sm btn-primary" onclick="window.print()" title="Print or Save PDF">
+            <i class="fa-solid fa-print"></i> <span>Print / PDF</span>
+          </button>
+          <button class="modal-close-btn" onclick="closeResumeModal()" aria-label="Close modal">
+            <i class="fa-solid fa-xmark"></i>
+          </button>
+        </div>
       </div>
 
       <div class="modal-body">
         <div class="resume-sheet">
           <div class="resume-sheet-header">
             <h2>MD FARZID AHMED</h2>
-            <p class="resume-sheet-role">FLUTTER DEVELOPER</p>
+            <p class="resume-sheet-role">FLUTTER DEVELOPER | SOFTWARE ENGINEER | MOBILE APP DEVELOPER</p>
             <p class="resume-sheet-contact">
-              Mohakhali, Dhaka, Bangladesh | Phone: +880 1751757891 | Email: farzidahmed150@gmail.com<br>
-              GitHub: github.com/farzidahmed | LinkedIn: linkedin.com/in/farzid-ahmed
+              Mohakhali, Dhaka, Bangladesh | Phone: +880 1751757891 | Email: <a href="mailto:farzidahmed150@gmail.com">farzidahmed150@gmail.com</a><br>
+              GitHub: <a href="https://github.com/farzidahmed" target="_blank">github.com/farzidahmed</a> | LinkedIn: <a href="https://linkedin.com/in/farzid-ahmed" target="_blank">linkedin.com/in/farzid-ahmed</a>
             </p>
           </div>
 
           <hr class="resume-hr">
 
+          <!-- Summary -->
           <div class="resume-sheet-section">
             <h4>SUMMARY</h4>
-            <p>Flutter Developer with 2+ years of experience building cross-platform mobile applications using Flutter, Dart, Firebase, and REST APIs. Skilled in state management, Google Maps integration, and real-time communication, with 5+ mobile apps end-to-end published on the Google Play Store and Apple App Store.</p>
+            <p>Flutter Developer with 2+ years of experience building and shipping cross-platform mobile applications end-to-end, from architecture to Play Store/App Store release. Strong in state management (Provider, Riverpod), REST API integration, Firebase, and real-time features (chat, live location, push notifications). Published 5+ apps with live production traffic and measurable performance improvements.</p>
           </div>
 
+          <!-- Technical Skills -->
           <div class="resume-sheet-section">
             <h4>TECHNICAL SKILLS</h4>
-            <p>Flutter | Dart | Provider | REST API | WebSockets | Socket.IO | SQFlite | Firebase | Google Maps API | Stripe Payment Gateway | RevenueCat | Third-Party API Integration | Push Notifications | App Store & Play Store Deployment | CI/CD | Git & GitHub | Cross-Platform Development</p>
+            <div class="resume-skills-grid-clean">
+              <p><strong>Languages & Framework:</strong> Flutter, Dart</p>
+              <p><strong>State Management:</strong> Provider, Riverpod</p>
+              <p><strong>Architecture:</strong> MVVM, Repository Pattern</p>
+              <p><strong>Backend & APIs:</strong> REST API, WebSockets, Socket.IO, Firebase (Auth, Firestore, FCM)</p>
+              <p><strong>Storage:</strong> SQLite, Hive, SharedPreferences</p>
+              <p><strong>Integrations:</strong> Google Maps, Stripe, RevenueCat, Third-Party APIs</p>
+              <p><strong>Testing & Tooling:</strong> Unit Testing, Widget Testing, Git & GitHub, CI/CD (Fastlane)</p>
+              <p><strong>Deployment:</strong> App Store & Play Store Publishing, Push Notifications, Cross-Platform Development</p>
+            </div>
           </div>
 
+          <!-- Work Experience -->
           <div class="resume-sheet-section">
             <h4>WORK EXPERIENCE</h4>
             <div class="resume-exp-item">
               <div class="resume-exp-head">
-                <strong>Softvence - Flutter Developer</strong>
-                <span>January 2025 – Present</span>
+                <strong>Softvence – Flutter Developer</strong>
+                <span>January 2025 – August 2026</span>
               </div>
               <ul>
-                <li>Developed strong expertise in Flutter by delivering 10+ cross-platform projects, improving both front-end UI quality and back-end integration</li>
-                <li>Improved code efficiency by 30% through optimized, refactored code and modern mobile development best practices</li>
-                <li>Published 5+ mobile applications on the Google Play Store and Apple App Store, managing 100% of the deployment, testing, and release process</li>
+                <li>Developed strong expertise in Flutter by delivering <strong>10+</strong> cross-platform projects, improving both front-end UI quality and back-end integration</li>
+                <li>Improved code efficiency by <strong>30%</strong> through optimized, refactored code and modern mobile development best practices</li>
+                <li>Published <strong>5+</strong> mobile applications on the Google Play Store and Apple App Store, managing 100% of the deployment, testing, and release process</li>
               </ul>
             </div>
 
             <div class="resume-exp-item">
               <div class="resume-exp-head">
-                <strong>BdTask - Flutter Developer</strong>
+                <strong>BdTask – Flutter Developer</strong>
                 <span>June 2024 – October 2024</span>
               </div>
               <ul>
                 <li>Collaborated with a team of 5+ senior developers to deliver 2 cross-platform apps, contributing 15+ UI components and integrating 30+ REST API endpoints</li>
-                <li>Coordinated testing and validation to ensure compliance with industry standards, reducing bugs by 20% through systematic QA processes</li>
+                <li>Coordinated testing and validation to ensure compliance with industry standards, reducing reported bugs by <strong>20%</strong> through systematic QA processes</li>
               </ul>
             </div>
           </div>
 
+          <!-- Projects -->
           <div class="resume-sheet-section">
             <h4>PROJECTS</h4>
+            
             <div class="resume-proj-item">
-              <strong>Direct Bazar - Live on Apple App Store</strong>
+              <div class="resume-proj-header">
+                <strong>Direct Bazar – Live on Play Store & App Store</strong>
+              </div>
               <ul>
-                <li>Delivered a production-ready iOS mobile app for Direct Bazar online grocery and e-commerce shopping platform</li>
-                <li>Built dynamic product browsing, multi-address management, cart checkout, and secure payment processing</li>
-                <li>Successfully published and deployed on Apple App Store</li>
+                <li>Built a full-featured Flutter e-commerce app using Provider for state management and Stripe for secure in-app payments</li>
+                <li>Implemented real-time chat and live location tracking to streamline buyer-seller communication and order delivery updates</li>
+                <li>Integrated and optimized REST APIs, improving app performance and reducing unnecessary memory usage by up to <strong>30%</strong> through efficient data handling, API response optimization, and local data management</li>
+                <li>Enabled real-time push notifications for order and chat updates, and successfully published the app on both the Google Play Store and Apple App Store</li>
               </ul>
+              <div class="resume-links-line">
+                <span>iOS: <a href="https://apps.apple.com/us/app/direct-bazar/id6756918034" target="_blank">apps.apple.com/us/app/direct-bazar/id6756918034</a></span> | 
+                <span>Android: <a href="https://play.google.com/store/apps/details?id=com.mydirectbazzarecommerce" target="_blank">play.google.com/store/apps/details?id=com.mydirectbazzarecommerce</a></span>
+              </div>
             </div>
+
             <div class="resume-proj-item">
-              <strong>Iploy - Live on Play Store & App Store</strong>
+              <div class="resume-proj-header">
+                <strong>BreathEasy222 – Live on Play Store</strong>
+              </div>
               <ul>
-                <li>Engineered a production-ready Flutter app for an Android and iOS job platform, achieving 90% crash-free stability</li>
-                <li>Implemented secure authentication with social logins (Google, Apple) and role-based access control for job providers and seekers</li>
-                <li>Integrated real-time push notifications to improve user engagement and deliver instant job-related updates</li>
-              </ul>
-            </div>
-            <div class="resume-proj-item">
-              <strong>BreathEasy222 - Live on Play Store</strong>
-              <ul>
-                <li>Delivered a cross-platform, production-ready Flutter mobile app with a responsive UI, achieving 95%+ device compatibility</li>
-                <li>Integrated REST APIs, Firebase push notifications, subscriptions, WebSocket, and Pusher for real-time communication, increasing user engagement by 40%</li>
+                <li>Delivered a cross-platform, production-ready Flutter mobile app with a responsive UI, achieving <strong>95%+</strong> device compatibility across screen sizes and OS versions</li>
+                <li>Integrated REST APIs, Firebase push notifications, subscriptions, WebSocket, and Pusher for real-time communication, increasing user engagement by <strong>40%</strong></li>
                 <li>Maintained App Store and Play Store compliance through optimized performance, security, and stability best practices</li>
               </ul>
+              <div class="resume-links-line">
+                <span>Android: <a href="https://play.google.com/store/search?q=Breatheasy222&c=apps" target="_blank">play.google.com/store/search?q=Breatheasy222&c=apps</a></span>
+              </div>
             </div>
+
             <div class="resume-proj-item">
-              <strong>Romeo Reminder - Live on App Store</strong>
+              <div class="resume-proj-header">
+                <strong>Iploy – Live on Play Store & App Store</strong>
+              </div>
               <ul>
-                <li>Designed and shipped a production-ready Flutter iOS app with a clean, intuitive UI, achieving 95%+ device compatibility</li>
-                <li>Implemented REST APIs and Firebase push notifications for user data management, date synchronization, and personalized reminders</li>
+                <li>Engineered a production-ready Flutter app for Android and iOS job platform, achieving <strong>90%</strong> crash-free stability</li>
+                <li>Implemented secure authentication with social logins (Google, Apple) and role-based access control across 2 user types: job providers and seekers</li>
+                <li>Integrated real-time push notifications to improve user engagement and deliver instant job-related updates</li>
               </ul>
+              <div class="resume-links-line">
+                <span>iOS: <a href="https://apps.apple.com/us/app/iploy/id6756605572" target="_blank">apps.apple.com/us/app/iploy/id6756605572</a></span> | 
+                <span>Android: <a href="https://play.google.com/store/apps/details?id=com.iploy_app" target="_blank">play.google.com/store/apps/details?id=com.iploy_app</a></span>
+              </div>
+            </div>
+
+            <div class="resume-proj-item">
+              <div class="resume-proj-header">
+                <strong>Romeo Reminder – Live on Apple App Store</strong>
+              </div>
+              <ul>
+                <li>Engineered an iOS-focused Flutter app delivering AI-integrated reminders personalized according to each partner's unique love language</li>
+                <li>Implemented intelligent suggestions for thoughtful acts of service and AI-assisted heartfelt messaging to build daily care habits</li>
+                <li>Integrated a seamless gift-giving experience through trusted partner channels alongside real-time push notifications</li>
+              </ul>
+              <div class="resume-links-line">
+                <span>iOS: <a href="https://apps.apple.com/us/app/romeo-reminder/id6758392313" target="_blank">apps.apple.com/us/app/romeo-reminder/id6758392313</a></span>
+              </div>
             </div>
           </div>
 
+          <!-- Education -->
           <div class="resume-sheet-section">
             <h4>EDUCATION</h4>
-            <p><strong>BSc in Computer Science & Engineering</strong> (In Progress) — European University of Bangladesh</p>
-            <p><strong>Diploma in Computer Science & Technology</strong> (2024) — Faridpur Polytechnic Institute, Faridpur - CGPA: 3.62/4.00</p>
+            <div class="resume-edu-item">
+              <div class="resume-exp-head">
+                <strong>BSc in Computer Science & Engineering</strong>
+                <span>Expected 2028</span>
+              </div>
+              <p>European University of Bangladesh</p>
+            </div>
+            <div class="resume-edu-item" style="margin-top: 0.5rem;">
+              <div class="resume-exp-head">
+                <strong>Diploma in Computer Science & Technology</strong>
+                <span>2024</span>
+              </div>
+              <p>Faridpur Polytechnic Institute, Faridpur – CGPA: 3.62/4.00</p>
+            </div>
           </div>
         </div>
       </div>
@@ -912,7 +1015,7 @@
             <small>Create a new project card that instantly appears on your portfolio!</small>
           </div>
         </div>
-        <button class="modal-close-btn" onclick="closeAddProjectModal()">
+        <button class="modal-close-btn" onclick="closeAddProjectModal()" aria-label="Close modal">
           <i class="fa-solid fa-xmark"></i>
         </button>
       </div>
@@ -948,7 +1051,7 @@
               <label for="new-proj-tags">Technologies (Comma separated)</label>
               <div class="input-wrap">
                 <i class="fa-solid fa-code input-icon"></i>
-                <input type="text" id="new-proj-tags" placeholder="e.g. Flutter, Dart, Bloc, Stripe" value="Flutter, Dart, Firebase">
+                <input type="text" id="new-proj-tags" placeholder="e.g. Flutter, Dart, Riverpod, Stripe" value="Flutter, Dart, Firebase">
               </div>
             </div>
           </div>

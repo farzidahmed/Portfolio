@@ -2,37 +2,58 @@
  * ==========================================================================
  * MD FARZID AHMED - PORTFOLIO DATA CONFIGURATION
  * ==========================================================================
- * আপনি এখান থেকে যেকোনো প্রজেক্ট সহজে পরিবর্তন, ডিলিট বা নতুন প্রজেক্ট অ্যাড করতে পারবেন।
- * You can easily edit existing projects, delete them, or add new projects below.
+ * Flutter Developer | Software Engineer | Mobile App Developer
+ * Live Production Apps, Architecture, Skills & Theme Presets
  */
 
 const PORTFOLIO_DATA = {
+  // ---------------- Personal Details ---------------- //
+  personal: {
+    name: 'MD Farzid Ahmed',
+    role: 'Flutter Developer | Software Engineer | Mobile App Developer',
+    location: 'Mohakhali, Dhaka, Bangladesh',
+    phone: '+880 1751757891',
+    email: 'farzidahmed150@gmail.com',
+    github: 'https://github.com/farzidahmed',
+    linkedin: 'https://linkedin.com/in/farzid-ahmed',
+    experienceYears: '2+',
+    publishedAppsCount: '5+',
+    projectsDeliveredCount: '10+'
+  },
+
   // ---------------- Projects List ---------------- //
   projects: [
     {
       id: 'direct-bazar',
       title: 'Direct Bazar',
-      category: 'E-Commerce & Grocery Platform',
-      metric: 'Live on App Store',
-      metricIcon: 'fa-bag-shopping',
-      status: 'Live on App Store',
+      category: 'E-Commerce & Live Delivery Platform',
+      metric: '30% Memory Optimized',
+      metricIcon: 'fa-gauge-high',
+      status: 'Live on Play Store & App Store',
       icon: 'fa-cart-shopping',
-      bannerGradient: 'linear-gradient(135deg, #11998e, #38ef7d)',
-      description: 'Delivered a production-ready iOS mobile app for Direct Bazar, a leading online grocery and consumer goods platform. Features dynamic product catalogs, seamless cart management, multi-address management, and secure checkout.',
+      bannerGradient: 'linear-gradient(135deg, #064E3B 0%, #047857 50%, #111827 100%)',
+      description: 'Full-featured cross-platform e-commerce app featuring real-time buyer-seller chat, live location delivery tracking, Stripe in-app payments, and optimized memory management.',
       bullets: [
-        'Built full cross-platform architecture with fluid iOS UI and <strong>99%+ crash-free stability</strong>.',
-        'Integrated address editing, order dispatching, and secure payment processing.',
-        'Successfully published and managed on Apple App Store under Direct Bazar Limited.'
+        'Built a full-featured Flutter e-commerce app using <strong>Provider</strong> for state management and <strong>Stripe</strong> for secure in-app payments.',
+        'Implemented <strong>real-time chat and live location tracking</strong> to streamline buyer-seller communication and order delivery updates.',
+        'Integrated and optimized REST APIs, improving app performance and <strong>reducing memory usage by up to 30%</strong> through efficient data handling and local caching.',
+        'Enabled <strong>real-time push notifications</strong> for order and chat updates, and successfully published on both <strong>Google Play Store and Apple App Store</strong>.'
       ],
-      tags: ['Flutter', 'iOS App', 'E-Commerce', 'REST API', 'Payment Gateway', 'Address Management'],
+      tags: ['Flutter', 'Dart', 'Provider', 'Stripe Payments', 'Live Chat', 'Live Location Tracking', 'REST API', 'FCM Push'],
       links: [
         {
           type: 'apple',
           label: 'Apple App Store',
           subtext: 'Download on',
           icon: 'fa-brands fa-apple',
-          url: 'https://apps.apple.com/us/app/direct-bazar/id6756918034',
-          isFullWidth: true
+          url: 'https://apps.apple.com/us/app/direct-bazar/id6756918034'
+        },
+        {
+          type: 'google',
+          label: 'Google Play Store',
+          subtext: 'Get it on',
+          icon: 'fa-brands fa-google-play',
+          url: 'https://play.google.com/store/apps/details?id=com.mydirectbazzarecommerce'
         }
       ]
     },
@@ -41,28 +62,28 @@ const PORTFOLIO_DATA = {
       title: 'Iploy',
       category: 'Job & Recruitment Platform',
       metric: '90% Crash-Free',
-      metricIcon: 'fa-shield-check',
-      status: 'Live on App Store & Play Store',
-      icon: 'fa-briefcase-medical',
-      bannerGradient: 'linear-gradient(135deg, #0f2027, #203a43, #2c5364)',
-      description: 'Engineered a comprehensive, production-ready Flutter app for an Android and iOS job platform. Features secure authentication with social logins (Google, Apple) and role-based access control for job providers and seekers.',
+      metricIcon: 'fa-shield-halved',
+      status: 'Live on Play Store & App Store',
+      icon: 'fa-briefcase',
+      bannerGradient: 'linear-gradient(135deg, #1E3A8A 0%, #1D4ED8 50%, #111827 100%)',
+      description: 'Production-ready Android & iOS recruitment platform engineered with role-based access for job seekers and employers, social logins (Google & Apple), and instant notification alerts.',
       bullets: [
-        'Engineered scalable cross-platform architecture achieving <strong>90% crash-free stability</strong>.',
-        'Implemented role-based dashboards (Job Seekers vs. Employers) & OAuth (Google/Apple).',
-        'Integrated real-time push notifications for instant job applications and status alerts.'
+        'Engineered a production-ready Flutter app for Android and iOS job platform, achieving <strong>90% crash-free stability</strong>.',
+        'Implemented secure authentication with <strong>social logins (Google, Apple)</strong> and role-based access control across 2 user types: job providers and seekers.',
+        'Integrated <strong>real-time push notifications</strong> to improve user engagement and deliver instant job-related updates and candidate applications.'
       ],
-      tags: ['Flutter', 'Dart', 'Firebase Auth', 'Push Notifications', 'REST API', 'Role-Based Access'],
+      tags: ['Flutter', 'Dart', 'Social Auth (Google/Apple)', 'Role-Based Access', 'Firebase FCM', 'REST API', 'App Store & Play Store'],
       links: [
         {
           type: 'apple',
-          label: 'App Store',
+          label: 'Apple App Store',
           subtext: 'Download on',
           icon: 'fa-brands fa-apple',
-          url: 'https://apps.apple.com/us/app/iploy-app/id6756605572'
+          url: 'https://apps.apple.com/us/app/iploy/id6756605572'
         },
         {
           type: 'google',
-          label: 'Google Play',
+          label: 'Google Play Store',
           subtext: 'Get it on',
           icon: 'fa-brands fa-google-play',
           url: 'https://play.google.com/store/apps/details?id=com.iploy_app'
@@ -73,18 +94,18 @@ const PORTFOLIO_DATA = {
       id: 'breatheasy',
       title: 'BreathEasy222',
       category: 'Health & Real-Time Utility',
-      metric: '95%+ Compatibility',
-      metricIcon: 'fa-mobile-screen',
+      metric: '40% Engagement Boost',
+      metricIcon: 'fa-chart-line',
       status: 'Live on Play Store',
       icon: 'fa-lungs',
-      bannerGradient: 'linear-gradient(135deg, #0575E6, #00F260)',
-      description: 'Delivered a high-performance cross-platform Flutter mobile app with a responsive UI. Integrated WebSocket and Pusher for instantaneous live data streaming and engagement.',
+      bannerGradient: 'linear-gradient(135deg, #0369A1 0%, #0284C7 50%, #111827 100%)',
+      description: 'Cross-platform mobile application delivering responsive UI across screen sizes with WebSocket & Pusher live communication, in-app subscriptions, and optimized performance benchmarks.',
       bullets: [
-        'Integrated REST APIs, Firebase push notifications, and in-app subscriptions.',
-        'Connected WebSocket & Pusher for real-time messaging, <strong>boosting user engagement by 40%</strong>.',
-        'Maintained full Play Store compliance through optimized security and memory benchmarks.'
+        'Delivered a cross-platform, production-ready Flutter mobile app with a responsive UI, achieving <strong>95%+ device compatibility</strong> across screen sizes and OS versions.',
+        'Integrated REST APIs, Firebase push notifications, subscriptions, <strong>WebSocket, and Pusher for real-time communication</strong>, increasing user engagement by <strong>40%</strong>.',
+        'Maintained App Store and Play Store compliance through optimized performance, security, and stability best practices.'
       ],
-      tags: ['Flutter', 'WebSocket', 'Pusher', 'Firebase', 'Subscriptions', 'REST API'],
+      tags: ['Flutter', 'Dart', 'WebSocket', 'Pusher', 'Firebase FCM', 'Subscriptions', 'REST API', 'Play Store'],
       links: [
         {
           type: 'google',
@@ -99,24 +120,25 @@ const PORTFOLIO_DATA = {
     {
       id: 'romeo-reminder',
       title: 'Romeo Reminder',
-      category: 'iOS Productivity & Smart Reminders',
-      metric: 'Push Sync',
-      metricIcon: 'fa-bell',
+      category: 'AI Lifestyle & Smart Couple Habits',
+      metric: 'AI-Powered',
+      metricIcon: 'fa-wand-magic-sparkles',
       status: 'Live on App Store',
-      icon: 'fa-clock-rotate-left',
-      bannerGradient: 'linear-gradient(135deg, #654ea3, #eaafc8)',
-      description: 'Designed and shipped a production-ready Flutter iOS app with a clean, intuitive UI. Provides intelligent date synchronization, personalized notifications, and cloud backup.',
+      icon: 'fa-heart',
+      bannerGradient: 'linear-gradient(135deg, #4C1D95 0%, #6D28D9 50%, #111827 100%)',
+      description: 'Dedicated iOS app designed for committed couples to cultivate daily love and care habits through AI-personalized love language reminders, thoughtful acts of service, heartfelt message crafting, and seamless gifting.',
       bullets: [
-        'Clean and fluid iOS-centric design achieving <strong>95%+ device compatibility</strong>.',
-        'Implemented REST APIs and Firebase push notifications for reliable event synchronization.',
-        'Achieved full Apple App Store review compliance through high performance standards.'
+        'Engineered an iOS-focused Flutter app delivering <strong>AI-integrated reminders</strong> personalized according to each partner\'s love language.',
+        'Implemented intelligent suggestions for <strong>thoughtful acts of service</strong> and AI-assisted heartfelt messaging.',
+        'Integrated a seamless <strong>gift-giving experience</strong> through trusted partners and reliable push notifications.',
+        'Successfully published on the <strong>Apple App Store</strong> with fluid native iOS feel, cloud sync, and 99%+ stability.'
       ],
-      tags: ['Flutter', 'iOS App', 'Firebase FCM', 'REST APIs', 'Date Sync', 'App Store Release'],
+      tags: ['Flutter', 'iOS App', 'AI Integration', 'Love Language Reminders', 'Acts of Service', 'Gift Commerce', 'FCM Push', 'App Store'],
       links: [
         {
           type: 'apple',
           label: 'Apple App Store',
-          subtext: 'Available on',
+          subtext: 'Download on',
           icon: 'fa-brands fa-apple',
           url: 'https://apps.apple.com/us/app/romeo-reminder/id6758392313',
           isFullWidth: true
@@ -125,81 +147,125 @@ const PORTFOLIO_DATA = {
     }
   ],
 
-  // ---------------- Theme Presets (Background & Accent Colors) ---------------- //
+  // ---------------- Categorized Technical Skills ---------------- //
+  skills: [
+    {
+      category: 'Languages & Framework',
+      icon: 'fa-code',
+      items: ['Flutter', 'Dart']
+    },
+    {
+      category: 'State Management',
+      icon: 'fa-cubes',
+      items: ['Provider', 'Riverpod']
+    },
+    {
+      category: 'Architecture',
+      icon: 'fa-sitemap',
+      items: ['MVVM', 'Repository Pattern', 'Clean Architecture']
+    },
+    {
+      category: 'Backend & APIs',
+      icon: 'fa-network-wired',
+      items: ['REST API', 'WebSockets', 'Socket.IO', 'Firebase (Auth, Firestore, FCM)']
+    },
+    {
+      category: 'Storage & Caching',
+      icon: 'fa-database',
+      items: ['SQLite', 'Hive', 'SharedPreferences']
+    },
+    {
+      category: 'Integrations & Payments',
+      icon: 'fa-plug-circle-bolt',
+      items: ['Google Maps API', 'Stripe Gateway', 'RevenueCat', 'Third-Party APIs']
+    },
+    {
+      category: 'Testing & Tooling',
+      icon: 'fa-vial-circle-check',
+      items: ['Unit Testing', 'Widget Testing', 'Git & GitHub', 'CI/CD (Fastlane)']
+    },
+    {
+      category: 'Deployment & Distribution',
+      icon: 'fa-cloud-arrow-up',
+      items: ['App Store Publishing', 'Play Store Publishing', 'Push Notifications', 'Cross-Platform Development']
+    }
+  ],
+
+  // ---------------- Refined Professional Theme Presets ---------------- //
   colorThemes: [
     {
       id: 'theme-flutter-sky',
-      name: 'Flutter Sky (Default)',
-      previewColor: '#0175C2',
-      vars: {
-        '--bg-primary': '#070c18',
-        '--bg-secondary': '#0d1527',
-        '--bg-tertiary': '#14203a',
-        '--bg-card': 'rgba(15, 23, 42, 0.75)',
-        '--flutter-sky': '#0175C2',
-        '--flutter-cyan': '#54C5F8',
-        '--accent-glow': 'rgba(1, 117, 194, 0.35)',
-        '--primary-gradient': 'linear-gradient(135deg, #0175C2 0%, #54C5F8 50%, #80D8FF 100%)'
-      }
-    },
-    {
-      id: 'theme-cyber-violet',
-      name: 'Cyber Violet Neon',
-      previewColor: '#8B5CF6',
-      vars: {
-        '--bg-primary': '#0c071a',
-        '--bg-secondary': '#160d2e',
-        '--bg-tertiary': '#241547',
-        '--bg-card': 'rgba(23, 14, 46, 0.75)',
-        '--flutter-sky': '#7C3AED',
-        '--flutter-cyan': '#A78BFA',
-        '--accent-glow': 'rgba(139, 92, 246, 0.4)',
-        '--primary-gradient': 'linear-gradient(135deg, #7C3AED 0%, #A78BFA 50%, #C084FC 100%)'
-      }
-    },
-    {
-      id: 'theme-emerald-matrix',
-      name: 'Emerald Matrix Glow',
-      previewColor: '#10B981',
-      vars: {
-        '--bg-primary': '#04130d',
-        '--bg-secondary': '#0a2319',
-        '--bg-tertiary': '#0f3627',
-        '--bg-card': 'rgba(10, 35, 25, 0.75)',
-        '--flutter-sky': '#059669',
-        '--flutter-cyan': '#34D399',
-        '--accent-glow': 'rgba(16, 185, 129, 0.4)',
-        '--primary-gradient': 'linear-gradient(135deg, #059669 0%, #10B981 50%, #6EE7B7 100%)'
-      }
-    },
-    {
-      id: 'theme-sunset-crimson',
-      name: 'Sunset Amber & Rose',
-      previewColor: '#F43F5E',
-      vars: {
-        '--bg-primary': '#16080e',
-        '--bg-secondary': '#270e19',
-        '--bg-tertiary': '#3d1627',
-        '--bg-card': 'rgba(39, 14, 25, 0.75)',
-        '--flutter-sky': '#E11D48',
-        '--flutter-cyan': '#FB7185',
-        '--accent-glow': 'rgba(244, 63, 94, 0.4)',
-        '--primary-gradient': 'linear-gradient(135deg, #E11D48 0%, #FB7185 50%, #FDA4AF 100%)'
-      }
-    },
-    {
-      id: 'theme-midnight-oled',
-      name: 'Midnight Deep Slate',
+      name: 'Obsidian Slate (Default)',
       previewColor: '#38BDF8',
       vars: {
-        '--bg-primary': '#020408',
-        '--bg-secondary': '#080d1a',
-        '--bg-tertiary': '#101828',
-        '--bg-card': 'rgba(12, 18, 32, 0.85)',
-        '--flutter-sky': '#0284C7',
+        '--bg-primary': '#0B0F17',
+        '--bg-secondary': '#111827',
+        '--bg-tertiary': '#1E293B',
+        '--bg-card': 'rgba(17, 24, 39, 0.72)',
+        '--flutter-sky': '#2563EB',
         '--flutter-cyan': '#38BDF8',
-        '--accent-glow': 'rgba(56, 189, 248, 0.35)',
-        '--primary-gradient': 'linear-gradient(135deg, #0284C7 0%, #38BDF8 50%, #BAE6FD 100%)'
+        '--accent-glow': 'rgba(56, 189, 248, 0.22)',
+        '--primary-gradient': 'linear-gradient(135deg, #2563EB 0%, #38BDF8 100%)'
+      }
+    },
+    {
+      id: 'theme-indigo-noir',
+      name: 'Deep Indigo (Stripe/Linear)',
+      previewColor: '#6366F1',
+      vars: {
+        '--bg-primary': '#080C14',
+        '--bg-secondary': '#0F172A',
+        '--bg-tertiary': '#1E1B4B',
+        '--bg-card': 'rgba(15, 23, 42, 0.75)',
+        '--flutter-sky': '#4F46E5',
+        '--flutter-cyan': '#818CF8',
+        '--accent-glow': 'rgba(99, 102, 241, 0.25)',
+        '--primary-gradient': 'linear-gradient(135deg, #4F46E5 0%, #818CF8 100%)'
+      }
+    },
+    {
+      id: 'theme-emerald-clean',
+      name: 'Emerald Noir (Supabase)',
+      previewColor: '#10B981',
+      vars: {
+        '--bg-primary': '#050D0A',
+        '--bg-secondary': '#0A1B14',
+        '--bg-tertiary': '#112F24',
+        '--bg-card': 'rgba(10, 27, 20, 0.75)',
+        '--flutter-sky': '#059669',
+        '--flutter-cyan': '#34D399',
+        '--accent-glow': 'rgba(16, 185, 129, 0.25)',
+        '--primary-gradient': 'linear-gradient(135deg, #059669 0%, #34D399 100%)'
+      }
+    },
+    {
+      id: 'theme-minimal-dark',
+      name: 'Minimal Charcoal (GitHub)',
+      previewColor: '#94A3B8',
+      vars: {
+        '--bg-primary': '#030712',
+        '--bg-secondary': '#0F172A',
+        '--bg-tertiary': '#1F2937',
+        '--bg-card': 'rgba(15, 23, 42, 0.8)',
+        '--flutter-sky': '#475569',
+        '--flutter-cyan': '#CBD5E1',
+        '--accent-glow': 'rgba(203, 213, 225, 0.2)',
+        '--primary-gradient': 'linear-gradient(135deg, #334155 0%, #94A3B8 100%)'
+      }
+    },
+    {
+      id: 'theme-nordic-slate',
+      name: 'Nordic Slate & Cyan',
+      previewColor: '#0EA5E9',
+      vars: {
+        '--bg-primary': '#070D18',
+        '--bg-secondary': '#0F1C30',
+        '--bg-tertiary': '#172B4A',
+        '--bg-card': 'rgba(15, 28, 48, 0.75)',
+        '--flutter-sky': '#0284C7',
+        '--flutter-cyan': '#0EA5E9',
+        '--accent-glow': 'rgba(14, 165, 233, 0.25)',
+        '--primary-gradient': 'linear-gradient(135deg, #0284C7 0%, #38BDF8 100%)'
       }
     }
   ]
