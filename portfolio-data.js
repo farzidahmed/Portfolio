@@ -24,6 +24,33 @@ const PORTFOLIO_DATA = {
   // ---------------- Projects List ---------------- //
   projects: [
     {
+      id: 'legacy-keeper',
+      title: 'Legacy Keeper',
+      category: 'Estate Planning & Digital Asset Management',
+      metric: '10K+ Downloads • 4.1★',
+      metricIcon: 'fa-star',
+      status: 'Live on Google Play',
+      icon: 'fa-shield-halved',
+      bannerGradient: 'linear-gradient(135deg, #0F172A 0%, #1E3A8A 50%, #2563EB 100%)',
+      description: 'Privacy-first Flutter estate planning application with 10+ modules covering family, medical, financial, and digital asset management, supporting 15 languages, real-time sync, and offline data handling.',
+      bullets: [
+        'Built a privacy-first Flutter estate planning application with <strong>10+ modules</strong> covering family, medical, financial, and digital asset management, supporting <strong>15 languages</strong>.',
+        'Integrated <strong>REST APIs, Firebase services, WebSockets, push notifications, and local storage</strong> to support authentication, real-time updates, notifications, and offline data handling.',
+        'Implemented a <strong>points-based rewards system</strong> and contributed to an application that reached <strong>10K+ downloads with a 4.1★ Google Play rating</strong>.'
+      ],
+      tags: ['Flutter', 'Dart', '15 Languages Support', 'Firebase Auth/FCM', 'WebSockets', 'Offline Storage', 'REST API', 'Play Store'],
+      links: [
+        {
+          type: 'google',
+          label: 'Google Play Store',
+          subtext: 'Get it on',
+          icon: 'fa-brands fa-google-play',
+          url: 'https://play.google.com/store/apps/details?id=com.legacykeeper.legacykeeper',
+          isFullWidth: true
+        }
+      ]
+    },
+    {
       id: 'direct-bazar',
       title: 'Direct Bazar',
       category: 'E-Commerce & Live Delivery Platform',
