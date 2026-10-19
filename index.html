@@ -60,23 +60,6 @@
       </nav>
 
       <div class="nav-actions">
-        <!-- Theme Color Palette Picker Trigger -->
-        <div class="palette-dropdown-wrap">
-          <button class="palette-btn" id="palette-btn" aria-label="Change Background Theme Color" title="Change Background & Accent Color">
-            <i class="fa-solid fa-palette"></i>
-            <span class="palette-dot-active"></span>
-          </button>
-          <div class="palette-dropdown" id="palette-dropdown">
-            <div class="palette-header">
-              <i class="fa-solid fa-wand-magic-sparkles"></i>
-              <span>Select Theme Color</span>
-            </div>
-            <div class="palette-options" id="palette-options">
-              <!-- Dynamically Populated from portfolio-data.js -->
-            </div>
-          </div>
-        </div>
-
         <button class="btn btn-sm btn-outline nav-resume-btn" onclick="openResumeModal()" title="View & Download Resume">
           <i class="fa-solid fa-file-lines"></i>
           <span>Resume</span>
@@ -143,6 +126,10 @@
               <i class="fa-solid fa-phone chip-icon"></i>
               <span>+880 1751757891</span>
             </a>
+            <a href="https://wa.me/8801751757891" target="_blank" rel="noopener noreferrer" class="chip clickable whatsapp-chip" title="Chat on WhatsApp">
+              <i class="fa-brands fa-whatsapp chip-icon"></i>
+              <span>WhatsApp Chat</span>
+            </a>
             <a href="mailto:farzidahmed150@gmail.com" class="chip clickable" title="Email Farzid">
               <i class="fa-solid fa-envelope chip-icon"></i>
               <span>farzidahmed150@gmail.com</span>
@@ -159,6 +146,10 @@
               <i class="fa-solid fa-file-pdf"></i>
               <span>Interactive Resume</span>
             </button>
+            <a href="https://wa.me/8801751757891" target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp-cta" title="Chat on WhatsApp">
+              <i class="fa-brands fa-whatsapp"></i>
+              <span>WhatsApp</span>
+            </a>
             <a href="https://github.com/farzidahmed" target="_blank" rel="noopener noreferrer" class="btn btn-glass" title="GitHub Profile">
               <i class="fa-brands fa-github"></i>
               <span>GitHub</span>
@@ -318,7 +309,7 @@
           <div class="strengths-grid">
             <div class="strength-card glass-panel">
               <div class="icon-circle flutter-accent">
-                <i class="fa-brands fa-flutter"></i>
+                <i class="fa-solid fa-layer-group"></i>
               </div>
               <h4>Architecture & State Management</h4>
               <p>Specialized in MVVM and Repository Pattern using Provider and Riverpod for modular, testable, and scalable codebases.</p>
@@ -604,12 +595,12 @@
       </div>
     </section>
 
-    <!-- Education & Languages Section -->
+    <!-- Education Section -->
     <section class="section education-section" id="education">
       <div class="container">
         <div class="section-header">
           <span class="section-badge"><i class="fa-solid fa-graduation-cap"></i> Academic Foundations</span>
-          <h2 class="section-title">Education & <span class="gradient-text">Languages</span></h2>
+          <h2 class="section-title">Education & <span class="gradient-text">Qualifications</span></h2>
           <p class="section-subtitle">Formal studies and technical degrees in Computer Science & Engineering.</p>
         </div>
 
@@ -647,33 +638,6 @@
 
         </div>
 
-        <!-- Languages Box -->
-        <div class="languages-box glass-panel">
-          <div class="lang-heading">
-            <i class="fa-solid fa-language lang-main-icon"></i>
-            <div>
-              <h3>Language Proficiency</h3>
-              <p>Effective communication for global distributed engineering teams</p>
-            </div>
-          </div>
-          <div class="lang-chips-grid">
-            <div class="lang-chip">
-              <span class="lang-flag">🇬🇧</span>
-              <div class="lang-details">
-                <strong>English</strong>
-                <span>Professional Working Proficiency</span>
-              </div>
-            </div>
-            <div class="lang-chip">
-              <span class="lang-flag">🇧🇩</span>
-              <div class="lang-details">
-                <strong>Bengali</strong>
-                <span>Native / Bilingual</span>
-              </div>
-            </div>
-          </div>
-        </div>
-
       </div>
     </section>
 
@@ -691,13 +655,27 @@
           <!-- Contact Info Cards -->
           <div class="contact-info-col">
             
+            <!-- WhatsApp Instant Chat Card (Highlighted) -->
+            <div class="contact-channel-card glass-panel whatsapp-highlight-card">
+              <div class="channel-icon whatsapp-bg">
+                <i class="fa-brands fa-whatsapp"></i>
+              </div>
+              <div class="channel-details">
+                <span class="channel-label">Instant WhatsApp Chat</span>
+                <a href="https://wa.me/8801751757891" target="_blank" rel="noopener noreferrer" class="channel-value">+880 1751757891</a>
+              </div>
+              <a href="https://wa.me/8801751757891" target="_blank" rel="noopener noreferrer" class="channel-chat-btn" title="Open WhatsApp Chat">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+              </a>
+            </div>
+
             <!-- Phone Card -->
             <div class="contact-channel-card glass-panel">
               <div class="channel-icon phone-bg">
                 <i class="fa-solid fa-phone-volume"></i>
               </div>
               <div class="channel-details">
-                <span class="channel-label">Direct Phone & WhatsApp</span>
+                <span class="channel-label">Direct Phone Call</span>
                 <a href="tel:+8801751757891" class="channel-value">+880 1751757891</a>
               </div>
               <button class="copy-btn" onclick="copyToClipboard('+8801751757891', 'Phone Number')" title="Copy Phone">
@@ -757,7 +735,7 @@
           <div class="contact-form-col">
             <div class="contact-form-card glass-panel">
               <h3 class="form-title"><i class="fa-regular fa-paper-plane"></i> Send Direct Message</h3>
-              <p class="form-desc">Send your inquiry or project details directly to Farzid's inbox.</p>
+              <p class="form-desc">Send your inquiry or project details directly to Farzid via Email or WhatsApp.</p>
 
               <form id="contact-form" onsubmit="handleContactSubmit(event)">
                 <div class="form-group">
@@ -784,10 +762,16 @@
                   </div>
                 </div>
 
-                <button type="submit" class="btn btn-primary btn-block">
-                  <i class="fa-solid fa-paper-plane"></i>
-                  <span>Send Message via Email</span>
-                </button>
+                <div class="form-submit-row">
+                  <button type="submit" class="btn btn-primary btn-flex">
+                    <i class="fa-solid fa-paper-plane"></i>
+                    <span>Send Email</span>
+                  </button>
+                  <button type="button" class="btn btn-whatsapp-submit btn-flex" onclick="sendViaWhatsApp()">
+                    <i class="fa-brands fa-whatsapp"></i>
+                    <span>Send via WhatsApp</span>
+                  </button>
+                </div>
               </form>
             </div>
           </div>
@@ -870,14 +854,14 @@
           <div class="resume-sheet-section">
             <h4>TECHNICAL SKILLS</h4>
             <div class="resume-skills-grid-clean">
-              <p><strong>Languages & Framework:</strong> Flutter, Dart</p>
-              <p><strong>State Management:</strong> Provider, Riverpod</p>
-              <p><strong>Architecture:</strong> MVVM, Repository Pattern</p>
-              <p><strong>Backend & APIs:</strong> REST API, WebSockets, Socket.IO, Firebase (Auth, Firestore, FCM)</p>
-              <p><strong>Storage:</strong> SQLite, Hive, SharedPreferences</p>
-              <p><strong>Integrations:</strong> Google Maps, Stripe, RevenueCat, Third-Party APIs</p>
-              <p><strong>Testing & Tooling:</strong> Unit Testing, Widget Testing, Git & GitHub, CI/CD (Fastlane)</p>
-              <p><strong>Deployment:</strong> App Store & Play Store Publishing, Push Notifications, Cross-Platform Development</p>
+              <p><i class="fa-solid fa-code"></i> <strong>Languages & Framework:</strong> Flutter, Dart</p>
+              <p><i class="fa-solid fa-cubes"></i> <strong>State Management:</strong> Provider, Riverpod</p>
+              <p><i class="fa-solid fa-sitemap"></i> <strong>Architecture:</strong> MVVM, Repository Pattern, Clean Architecture</p>
+              <p><i class="fa-solid fa-network-wired"></i> <strong>Backend & APIs:</strong> REST API, WebSockets, Socket.IO, Firebase (Auth, Firestore, FCM)</p>
+              <p><i class="fa-solid fa-database"></i> <strong>Storage:</strong> SQLite, Hive, SharedPreferences</p>
+              <p><i class="fa-solid fa-plug-circle-bolt"></i> <strong>Integrations:</strong> Google Maps, Stripe, RevenueCat, Third-Party APIs</p>
+              <p><i class="fa-solid fa-vial-circle-check"></i> <strong>Testing & Tooling:</strong> Unit Testing, Widget Testing, Git & GitHub, CI/CD (Fastlane)</p>
+              <p><i class="fa-solid fa-cloud-arrow-up"></i> <strong>Deployment:</strong> App Store & Play Store Publishing, Push Notifications, Cross-Platform Development</p>
             </div>
           </div>
 
@@ -1120,6 +1104,19 @@
   <button class="back-to-top" id="back-to-top" aria-label="Back to top">
     <i class="fa-solid fa-arrow-up"></i>
   </button>
+
+  <!-- Floating WhatsApp Quick Connect Button -->
+  <a href="https://wa.me/8801751757891?text=Hi%20Farzid,%20I%20reviewed%20your%20portfolio%20and%20would%20like%20to%20connect!" 
+     target="_blank" 
+     rel="noopener noreferrer" 
+     class="floating-whatsapp-btn" 
+     id="floating-whatsapp" 
+     title="Chat directly with Farzid on WhatsApp"
+     aria-label="Chat with Farzid on WhatsApp">
+    <span class="whatsapp-pulse-ring"></span>
+    <i class="fa-brands fa-whatsapp"></i>
+    <span class="whatsapp-floating-label">Chat on WhatsApp</span>
+  </a>
 
   <!-- External Portfolio Data Script First -->
   <script src="portfolio-data.js?v=2"></script>

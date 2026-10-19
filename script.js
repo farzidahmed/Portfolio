@@ -508,6 +508,26 @@ function handleContactSubmit(e) {
   showToast('Opening your email client...', 'fa-solid fa-paper-plane');
 }
 
+function sendViaWhatsApp() {
+  const name = (document.getElementById('sender-name')?.value || '').trim();
+  const subject = (document.getElementById('sender-subject')?.value || '').trim();
+  const message = (document.getElementById('sender-message')?.value || '').trim();
+
+  let text = '';
+  if (name || subject || message) {
+    text = `*Message from Portfolio Website*\n\n` +
+           `👤 *From:* ${name || 'Prospective Client / Recruiter'}\n` +
+           `📌 *Subject:* ${subject || 'Flutter Development Inquiry'}\n\n` +
+           `💬 *Message:*\n${message || 'Hi Farzid, I would like to discuss a project/opportunity with you.'}`;
+  } else {
+    text = 'Hi Farzid, I saw your Flutter Developer portfolio and would like to connect with you!';
+  }
+
+  const waUrl = `https://wa.me/8801751757891?text=${encodeURIComponent(text)}`;
+  window.open(waUrl, '_blank', 'noopener,noreferrer');
+  showToast('Connecting to WhatsApp...', 'fa-brands fa-whatsapp');
+}
+
 // ---------------- 14. 3D Mouse Tilt & Interactive Hover Engine ---------------- //
 function initCardHoverTiltEffect() {
   const tiltElements = document.querySelectorAll('.project-card, .skill-cat-card, .strength-card, .edu-card, .timeline-card, .developer-card, .stat-card, .social-box, .contact-channel-card');

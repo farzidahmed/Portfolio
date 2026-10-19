@@ -13,6 +13,8 @@ const PORTFOLIO_DATA = {
     role: 'Flutter Developer | Software Engineer | Mobile App Developer',
     location: 'Mohakhali, Dhaka, Bangladesh',
     phone: '+880 1751757891',
+    whatsapp: 'https://wa.me/8801751757891',
+    whatsappNumber: '+880 1751757891',
     email: 'farzidahmed150@gmail.com',
     github: 'https://github.com/farzidahmed',
     linkedin: 'https://linkedin.com/in/farzid-ahmed',
@@ -80,7 +82,7 @@ const PORTFOLIO_DATA = {
           label: 'Google Play Store',
           subtext: 'Get it on',
           icon: 'fa-brands fa-google-play',
-          url: 'https://play.google.com/store/apps/details?id=com.mydirectbazzarecommerce'
+          url: 'https://play.google.com/store/apps/details?id=com.mydirectbazzarecommerce.app&pcampaignid=web_share'
         }
       ]
     },
